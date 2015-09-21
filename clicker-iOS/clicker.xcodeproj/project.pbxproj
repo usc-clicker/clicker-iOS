@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19673F351BAF8F48002CC363 /* Circled 1 Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 19673F301BAF8F48002CC363 /* Circled 1 Filled-50.png */; settings = {ASSET_TAGS = (); }; };
+		19673F361BAF8F48002CC363 /* Circled 2 Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 19673F311BAF8F48002CC363 /* Circled 2 Filled-50.png */; settings = {ASSET_TAGS = (); }; };
+		19673F371BAF8F48002CC363 /* Circled 3 Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 19673F321BAF8F48002CC363 /* Circled 3 Filled-50.png */; settings = {ASSET_TAGS = (); }; };
+		19673F381BAF8F48002CC363 /* Circled 4 Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 19673F331BAF8F48002CC363 /* Circled 4 Filled-50.png */; settings = {ASSET_TAGS = (); }; };
+		19673F391BAF8F48002CC363 /* Circled 5 Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 19673F341BAF8F48002CC363 /* Circled 5 Filled-50.png */; settings = {ASSET_TAGS = (); }; };
+		19673F3B1BAF91FF002CC363 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19673F3A1BAF91FE002CC363 /* FirstViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		19673F3D1BAF9208002CC363 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19673F3C1BAF9208002CC363 /* SecondViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		19673F411BAF9C3C002CC363 /* FreeResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19673F401BAF9C3C002CC363 /* FreeResponseViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		359944AA1BAB79E700F8540B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944A91BAB79E700F8540B /* AppDelegate.swift */; };
 		359944AC1BAB79E700F8540B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944AB1BAB79E700F8540B /* ViewController.swift */; };
 		359944AF1BAB79E700F8540B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359944AD1BAB79E700F8540B /* Main.storyboard */; };
 		359944B11BAB79E700F8540B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 359944B01BAB79E700F8540B /* Images.xcassets */; };
 		359944B41BAB79E700F8540B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 359944B21BAB79E700F8540B /* LaunchScreen.xib */; };
 		359944C01BAB79E700F8540B /* clickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944BF1BAB79E700F8540B /* clickerTests.swift */; };
-		359944CA1BAB800E00F8540B /* Circled 1 Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 359944C91BAB800E00F8540B /* Circled 1 Filled-50.png */; };
-		359944CD1BAB801C00F8540B /* Circled 2 Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 359944CC1BAB801C00F8540B /* Circled 2 Filled-50.png */; };
-		359944CF1BAB802000F8540B /* Circled 3  Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 359944CE1BAB802000F8540B /* Circled 3  Filled-50.png */; };
-		359944D11BAB802500F8540B /* Circled 4 Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 359944D01BAB802500F8540B /* Circled 4 Filled-50.png */; };
-		359944D31BAB802900F8540B /* Circled 5  Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 359944D21BAB802900F8540B /* Circled 5  Filled-50.png */; };
 		359944D91BAB947300F8540B /* MultipleChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944D81BAB947300F8540B /* MultipleChoiceTableViewCell.swift */; };
 		359944DB1BAB9F4900F8540B /* NumericalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944DA1BAB9F4900F8540B /* NumericalViewController.swift */; };
 		359944DF1BABA16500F8540B /* MultipleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */; };
@@ -34,6 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19673F301BAF8F48002CC363 /* Circled 1 Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circled 1 Filled-50.png"; path = "../../../../Downloads/Circled 1 Filled-50.png"; sourceTree = "<group>"; };
+		19673F311BAF8F48002CC363 /* Circled 2 Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circled 2 Filled-50.png"; path = "../../../../Downloads/Circled 2 Filled-50.png"; sourceTree = "<group>"; };
+		19673F321BAF8F48002CC363 /* Circled 3 Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circled 3 Filled-50.png"; path = "../../../../Downloads/Circled 3 Filled-50.png"; sourceTree = "<group>"; };
+		19673F331BAF8F48002CC363 /* Circled 4 Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circled 4 Filled-50.png"; path = "../../../../Downloads/Circled 4 Filled-50.png"; sourceTree = "<group>"; };
+		19673F341BAF8F48002CC363 /* Circled 5 Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circled 5 Filled-50.png"; path = "../../../../Downloads/Circled 5 Filled-50.png"; sourceTree = "<group>"; };
+		19673F3A1BAF91FE002CC363 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = "../../../CSCI401/clicker-iOS/myClicker/myClicker/FirstViewController.swift"; sourceTree = "<group>"; };
+		19673F3C1BAF9208002CC363 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = "../../../CSCI401/clicker-iOS/myClicker/myClicker/SecondViewController.swift"; sourceTree = "<group>"; };
+		19673F401BAF9C3C002CC363 /* FreeResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreeResponseViewController.swift; path = ../FreeResponseViewController.swift; sourceTree = "<group>"; };
 		359944A41BAB79E700F8540B /* clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		359944A81BAB79E700F8540B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		359944A91BAB79E700F8540B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,11 +55,6 @@
 		359944B91BAB79E700F8540B /* clickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = clickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		359944BE1BAB79E700F8540B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		359944BF1BAB79E700F8540B /* clickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clickerTests.swift; sourceTree = "<group>"; };
-		359944C91BAB800E00F8540B /* Circled 1 Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circled 1 Filled-50.png"; path = "../../../Downloads/Circled 1 Filled-50.png"; sourceTree = "<group>"; };
-		359944CC1BAB801C00F8540B /* Circled 2 Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circled 2 Filled-50.png"; path = "../../../Downloads/Circled 2 Filled-50.png"; sourceTree = "<group>"; };
-		359944CE1BAB802000F8540B /* Circled 3  Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circled 3  Filled-50.png"; path = "../../../Downloads/Circled 3  Filled-50.png"; sourceTree = "<group>"; };
-		359944D01BAB802500F8540B /* Circled 4 Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circled 4 Filled-50.png"; path = "../../../Downloads/Circled 4 Filled-50.png"; sourceTree = "<group>"; };
-		359944D21BAB802900F8540B /* Circled 5  Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circled 5  Filled-50.png"; path = "../../../Downloads/Circled 5  Filled-50.png"; sourceTree = "<group>"; };
 		359944D81BAB947300F8540B /* MultipleChoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleChoiceTableViewCell.swift; sourceTree = "<group>"; };
 		359944DA1BAB9F4900F8540B /* NumericalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericalViewController.swift; sourceTree = "<group>"; };
 		359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleChoiceViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +101,10 @@
 			children = (
 				359944CB1BAB801100F8540B /* Images */,
 				359944A91BAB79E700F8540B /* AppDelegate.swift */,
+				19673F3A1BAF91FE002CC363 /* FirstViewController.swift */,
+				19673F3C1BAF9208002CC363 /* SecondViewController.swift */,
 				359944AB1BAB79E700F8540B /* ViewController.swift */,
+				19673F401BAF9C3C002CC363 /* FreeResponseViewController.swift */,
 				359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */,
 				359944DA1BAB9F4900F8540B /* NumericalViewController.swift */,
 				359944D81BAB947300F8540B /* MultipleChoiceTableViewCell.swift */,
@@ -135,11 +144,11 @@
 		359944CB1BAB801100F8540B /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				359944C91BAB800E00F8540B /* Circled 1 Filled-50.png */,
-				359944CC1BAB801C00F8540B /* Circled 2 Filled-50.png */,
-				359944CE1BAB802000F8540B /* Circled 3  Filled-50.png */,
-				359944D01BAB802500F8540B /* Circled 4 Filled-50.png */,
-				359944D21BAB802900F8540B /* Circled 5  Filled-50.png */,
+				19673F301BAF8F48002CC363 /* Circled 1 Filled-50.png */,
+				19673F311BAF8F48002CC363 /* Circled 2 Filled-50.png */,
+				19673F321BAF8F48002CC363 /* Circled 3 Filled-50.png */,
+				19673F331BAF8F48002CC363 /* Circled 4 Filled-50.png */,
+				19673F341BAF8F48002CC363 /* Circled 5 Filled-50.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -188,7 +197,8 @@
 		3599449C1BAB79E700F8540B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Univeristy of Southern California";
 				TargetAttributes = {
 					359944A31BAB79E700F8540B = {
@@ -224,14 +234,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				359944D31BAB802900F8540B /* Circled 5  Filled-50.png in Resources */,
+				19673F351BAF8F48002CC363 /* Circled 1 Filled-50.png in Resources */,
+				19673F371BAF8F48002CC363 /* Circled 3 Filled-50.png in Resources */,
 				359944AF1BAB79E700F8540B /* Main.storyboard in Resources */,
-				359944D11BAB802500F8540B /* Circled 4 Filled-50.png in Resources */,
-				359944CD1BAB801C00F8540B /* Circled 2 Filled-50.png in Resources */,
+				19673F381BAF8F48002CC363 /* Circled 4 Filled-50.png in Resources */,
+				19673F391BAF8F48002CC363 /* Circled 5 Filled-50.png in Resources */,
 				359944B41BAB79E700F8540B /* LaunchScreen.xib in Resources */,
+				19673F361BAF8F48002CC363 /* Circled 2 Filled-50.png in Resources */,
 				359944B11BAB79E700F8540B /* Images.xcassets in Resources */,
-				359944CF1BAB802000F8540B /* Circled 3  Filled-50.png in Resources */,
-				359944CA1BAB800E00F8540B /* Circled 1 Filled-50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +262,10 @@
 				359944AC1BAB79E700F8540B /* ViewController.swift in Sources */,
 				359944D91BAB947300F8540B /* MultipleChoiceTableViewCell.swift in Sources */,
 				359944AA1BAB79E700F8540B /* AppDelegate.swift in Sources */,
+				19673F3B1BAF91FF002CC363 /* FirstViewController.swift in Sources */,
+				19673F3D1BAF9208002CC363 /* SecondViewController.swift in Sources */,
 				359944DB1BAB9F4900F8540B /* NumericalViewController.swift in Sources */,
+				19673F411BAF9C3C002CC363 /* FreeResponseViewController.swift in Sources */,
 				359944DF1BABA16500F8540B /* MultipleChoiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +328,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -380,6 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = clicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "USC.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -390,6 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = clicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "USC.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -408,6 +424,7 @@
 				);
 				INFOPLIST_FILE = clickerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "USC.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/clicker.app/clicker";
 			};
@@ -423,6 +440,7 @@
 				);
 				INFOPLIST_FILE = clickerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "USC.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/clicker.app/clicker";
 			};
@@ -447,6 +465,7 @@
 				359944C51BAB79E700F8540B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		359944C61BAB79E700F8540B /* Build configuration list for PBXNativeTarget "clickerTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +474,7 @@
 				359944C81BAB79E700F8540B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

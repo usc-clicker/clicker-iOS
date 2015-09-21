@@ -10,23 +10,46 @@ import UIKit
 
 class MultipleChoiceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet var Time: UILabel!
+    
+    var timeRemaining : Int = 15;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        Time.text = "00:15";
+        
         // Do any additional setup after loading the view.
+        _ = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timeDown", userInfo: nil, repeats: false);
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+    func timeDown() {
+        timeRemaining--;
+        if timeRemaining != 0 {
+            _ = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timeDown", userInfo: nil, repeats: false);
+        }
+        else {
+            self.navigationController?.popViewControllerAnimated(true);
+        }
+        if timeRemaining < 10 {
+            Time.text = "00:0" + String(timeRemaining);
+        }
+        else {
+            Time.text = "00:" + String(timeRemaining);
+        }
+    }
+
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : MultipleChoiceTableViewCell = tableView.dequeueReusableCellWithIdentifier("multipleChoiceAnswer", forIndexPath: indexPath) as MultipleChoiceTableViewCell;
+        let cell : MultipleChoiceTableViewCell = tableView.dequeueReusableCellWithIdentifier("multipleChoiceAnswer", forIndexPath: indexPath) as! MultipleChoiceTableViewCell;
         
         switch indexPath.row {
         case 0:
@@ -37,13 +60,13 @@ class MultipleChoiceViewController: UIViewController, UITableViewDelegate, UITab
             cell.Number.image = UIImage(named: "Circled 2 Filled-50.png");
         case 2:
             cell.Answer.text = "1880";
-            cell.Number.image = UIImage(named: "Circled 3  Filled-50.png");
+            cell.Number.image = UIImage(named: "Circled 3 Filled-50.png");
         case 3:
             cell.Answer.text = "1930";
             cell.Number.image = UIImage(named: "Circled 4 Filled-50.png");
         case 4:
             cell.Answer.text = "1870";
-            cell.Number.image = UIImage(named: "Circled 5  Filled-50.png");
+            cell.Number.image = UIImage(named: "Circled 5 Filled-50.png");
         default:
             cell.Answer.text = "Default";
         }
