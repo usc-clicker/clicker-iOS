@@ -1,7 +1,14 @@
 # clicker-iOS
 USC Clicker iOS Client
 
-There is only a timer for the NumericalViewController. Just add it to the other viewControllers and do the auto layout stuff.
+To Run:
+- go to clicker-iOS folder
+- double click on clicker.xcodeproj
+- this will open up xcode
+- click the run (play) button at the top and the simulator should open and start
+
+-Michael
+
 
 For those new to swift all that’s really foreign is the ? and ! symbols which are called optionals. They are important to swift to allow for errors not to happen. Read up on that.
 
