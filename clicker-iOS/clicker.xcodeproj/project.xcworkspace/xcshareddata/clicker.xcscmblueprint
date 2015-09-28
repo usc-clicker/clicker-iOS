@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "782149001585E35DA664A545B1DA3CBE011F5A28",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3260870C2A30BA241E748079CC8459F84835F52F" : 0,
+    "782149001585E35DA664A545B1DA3CBE011F5A28" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9D6D1866-98EE-4B9C-BADD-ED9D772956FB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3260870C2A30BA241E748079CC8459F84835F52F" : "CSCI401\/clicker-iOS\/myClicker\/",
+    "782149001585E35DA664A545B1DA3CBE011F5A28" : "clicker-iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "clicker",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "clicker-iOS\/clicker.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/usc-clicker\/clicker-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3260870C2A30BA241E748079CC8459F84835F52F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/usc-clicker\/clicker-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "782149001585E35DA664A545B1DA3CBE011F5A28"
+    }
+  ]
+}
