@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19673F3B1BAF91FF002CC363 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19673F3A1BAF91FE002CC363 /* FirstViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		19673F3D1BAF9208002CC363 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19673F3C1BAF9208002CC363 /* SecondViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		19673F411BAF9C3C002CC363 /* FreeResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19673F401BAF9C3C002CC363 /* FreeResponseViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		192674001BC2520300DF6032 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192673FF1BC2520300DF6032 /* SecondViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		192674021BC2520F00DF6032 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192674011BC2520F00DF6032 /* FirstViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		192674041BC2523400DF6032 /* FreeResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192674031BC2523400DF6032 /* FreeResponseViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		19DCE3051BB8BB4A006FB33F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DCE3031BB8BB4A006FB33F /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
 		19DCE3061BB8BB4A006FB33F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DCE3041BB8BB4A006FB33F /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
 		19DCE3081BB8BBCC006FB33F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DCE3071BB8BBCC006FB33F /* AudioToolbox.framework */; };
@@ -46,9 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19673F3A1BAF91FE002CC363 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = "../../../CSCI401/clicker-iOS/myClicker/myClicker/FirstViewController.swift"; sourceTree = "<group>"; };
-		19673F3C1BAF9208002CC363 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = "../../../CSCI401/clicker-iOS/myClicker/myClicker/SecondViewController.swift"; sourceTree = "<group>"; };
-		19673F401BAF9C3C002CC363 /* FreeResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreeResponseViewController.swift; path = ../FreeResponseViewController.swift; sourceTree = "<group>"; };
+		192673FF1BC2520300DF6032 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		192674011BC2520F00DF6032 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		192674031BC2523400DF6032 /* FreeResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeResponseViewController.swift; sourceTree = "<group>"; };
 		19DCE3031BB8BB4A006FB33F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		19DCE3041BB8BB4A006FB33F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		19DCE3071BB8BBCC006FB33F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -153,14 +153,14 @@
 		359944A61BAB79E700F8540B /* clicker */ = {
 			isa = PBXGroup;
 			children = (
+				192674011BC2520F00DF6032 /* FirstViewController.swift */,
+				192673FF1BC2520300DF6032 /* SecondViewController.swift */,
 				359944A91BAB79E700F8540B /* AppDelegate.swift */,
-				19673F3A1BAF91FE002CC363 /* FirstViewController.swift */,
-				19673F3C1BAF9208002CC363 /* SecondViewController.swift */,
 				359944AB1BAB79E700F8540B /* ViewController.swift */,
-				19673F401BAF9C3C002CC363 /* FreeResponseViewController.swift */,
 				359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */,
 				359944DA1BAB9F4900F8540B /* NumericalViewController.swift */,
 				359944D81BAB947300F8540B /* MultipleChoiceTableViewCell.swift */,
+				192674031BC2523400DF6032 /* FreeResponseViewController.swift */,
 				359944AD1BAB79E700F8540B /* Main.storyboard */,
 				359944B01BAB79E700F8540B /* Images.xcassets */,
 				359944B21BAB79E700F8540B /* LaunchScreen.xib */,
@@ -298,10 +298,10 @@
 				359944AC1BAB79E700F8540B /* ViewController.swift in Sources */,
 				359944D91BAB947300F8540B /* MultipleChoiceTableViewCell.swift in Sources */,
 				359944AA1BAB79E700F8540B /* AppDelegate.swift in Sources */,
-				19673F3B1BAF91FF002CC363 /* FirstViewController.swift in Sources */,
-				19673F3D1BAF9208002CC363 /* SecondViewController.swift in Sources */,
+				192674021BC2520F00DF6032 /* FirstViewController.swift in Sources */,
 				359944DB1BAB9F4900F8540B /* NumericalViewController.swift in Sources */,
-				19673F411BAF9C3C002CC363 /* FreeResponseViewController.swift in Sources */,
+				192674001BC2520300DF6032 /* SecondViewController.swift in Sources */,
+				192674041BC2523400DF6032 /* FreeResponseViewController.swift in Sources */,
 				359944DF1BABA16500F8540B /* MultipleChoiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
