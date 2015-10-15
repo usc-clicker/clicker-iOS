@@ -31,6 +31,7 @@
 		359944D91BAB947300F8540B /* MultipleChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944D81BAB947300F8540B /* MultipleChoiceTableViewCell.swift */; };
 		359944DB1BAB9F4900F8540B /* NumericalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944DA1BAB9F4900F8540B /* NumericalViewController.swift */; };
 		359944DF1BABA16500F8540B /* MultipleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */; };
+		DF3962A81BCF78C9009E9D67 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3962A71BCF78C9009E9D67 /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,9 @@
 		359944D81BAB947300F8540B /* MultipleChoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleChoiceTableViewCell.swift; sourceTree = "<group>"; };
 		359944DA1BAB9F4900F8540B /* NumericalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericalViewController.swift; sourceTree = "<group>"; };
 		359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleChoiceViewController.swift; sourceTree = "<group>"; };
+		DF3962A51BCF78C8009E9D67 /* clicker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "clicker-Bridging-Header.h"; sourceTree = "<group>"; };
+		DF3962A61BCF78C9009E9D67 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		DF3962A71BCF78C9009E9D67 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,9 @@
 				359944B01BAB79E700F8540B /* Images.xcassets */,
 				359944B21BAB79E700F8540B /* LaunchScreen.xib */,
 				359944A71BAB79E700F8540B /* Supporting Files */,
+				DF3962A61BCF78C9009E9D67 /* LoginViewController.h */,
+				DF3962A71BCF78C9009E9D67 /* LoginViewController.m */,
+				DF3962A51BCF78C8009E9D67 /* clicker-Bridging-Header.h */,
 			);
 			path = clicker;
 			sourceTree = "<group>";
@@ -293,6 +300,7 @@
 				359944D91BAB947300F8540B /* MultipleChoiceTableViewCell.swift in Sources */,
 				359944AA1BAB79E700F8540B /* AppDelegate.swift in Sources */,
 				359944DB1BAB9F4900F8540B /* NumericalViewController.swift in Sources */,
+				DF3962A81BCF78C9009E9D67 /* LoginViewController.m in Sources */,
 				19673F411BAF9C3C002CC363 /* FreeResponseViewController.swift in Sources */,
 				359944DF1BABA16500F8540B /* MultipleChoiceViewController.swift in Sources */,
 			);
@@ -420,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -428,6 +437,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "USC.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "clicker/clicker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -435,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -443,6 +455,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "USC.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "clicker/clicker-Bridging-Header.h";
 			};
 			name = Release;
 		};
