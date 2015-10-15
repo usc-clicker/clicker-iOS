@@ -153,12 +153,14 @@
 		359944A61BAB79E700F8540B /* clicker */ = {
 			isa = PBXGroup;
 			children = (
+				192674011BC2520F00DF6032 /* FirstViewController.swift */,
+				192673FF1BC2520300DF6032 /* SecondViewController.swift */,
 				359944A91BAB79E700F8540B /* AppDelegate.swift */,
 				359944AB1BAB79E700F8540B /* ViewController.swift */,
-				19673F401BAF9C3C002CC363 /* FreeResponseViewController.swift */,
 				359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */,
 				359944DA1BAB9F4900F8540B /* NumericalViewController.swift */,
 				359944D81BAB947300F8540B /* MultipleChoiceTableViewCell.swift */,
+				192674031BC2523400DF6032 /* FreeResponseViewController.swift */,
 				359944AD1BAB79E700F8540B /* Main.storyboard */,
 				359944B01BAB79E700F8540B /* Images.xcassets */,
 				359944B21BAB79E700F8540B /* LaunchScreen.xib */,
