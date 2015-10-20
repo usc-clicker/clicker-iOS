@@ -32,6 +32,7 @@
 		359944DB1BAB9F4900F8540B /* NumericalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944DA1BAB9F4900F8540B /* NumericalViewController.swift */; };
 		359944DF1BABA16500F8540B /* MultipleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */; };
 		DF3962A81BCF78C9009E9D67 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3962A71BCF78C9009E9D67 /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DFF6374B1BD631A5002B7699 /* FreeResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19673F401BAF9C3C002CC363 /* FreeResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreeResponseViewController.swift; path = ../FreeResponseViewController.swift; sourceTree = "<group>"; };
 		19DCE3031BB8BB4A006FB33F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		19DCE3041BB8BB4A006FB33F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		19DCE3071BB8BBCC006FB33F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -76,6 +76,7 @@
 		DF3962A51BCF78C8009E9D67 /* clicker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "clicker-Bridging-Header.h"; sourceTree = "<group>"; };
 		DF3962A61BCF78C9009E9D67 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		DF3962A71BCF78C9009E9D67 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeResponseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,14 +154,12 @@
 		359944A61BAB79E700F8540B /* clicker */ = {
 			isa = PBXGroup;
 			children = (
-				192674011BC2520F00DF6032 /* FirstViewController.swift */,
-				192673FF1BC2520300DF6032 /* SecondViewController.swift */,
 				359944A91BAB79E700F8540B /* AppDelegate.swift */,
 				359944AB1BAB79E700F8540B /* ViewController.swift */,
 				359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */,
 				359944DA1BAB9F4900F8540B /* NumericalViewController.swift */,
 				359944D81BAB947300F8540B /* MultipleChoiceTableViewCell.swift */,
-				192674031BC2523400DF6032 /* FreeResponseViewController.swift */,
+				DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */,
 				359944AD1BAB79E700F8540B /* Main.storyboard */,
 				359944B01BAB79E700F8540B /* Images.xcassets */,
 				359944B21BAB79E700F8540B /* LaunchScreen.xib */,
@@ -304,6 +303,7 @@
 				359944DB1BAB9F4900F8540B /* NumericalViewController.swift in Sources */,
 				DF3962A81BCF78C9009E9D67 /* LoginViewController.m in Sources */,
 				19673F411BAF9C3C002CC363 /* FreeResponseViewController.swift in Sources */,
+				DFF6374B1BD631A5002B7699 /* FreeResponseViewController.swift in Sources */,
 				359944DF1BABA16500F8540B /* MultipleChoiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
