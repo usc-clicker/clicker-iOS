@@ -89,6 +89,15 @@
 
 -(void)goButtonPressed:(id)sender {
     [self performSegueWithIdentifier:@"login" sender:self];
+    //API call
+    NSString *url_str = @"http://fontify.usc.edu";
+    [self send_request:url_str];
+}
+
+- (void)send_request:(NSString *)url_str {
+    NSURL *url = [NSURL URLWithString:url_str];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
 -(void)dealloc{

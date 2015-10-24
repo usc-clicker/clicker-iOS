@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19673F411BAF9C3C002CC363 /* FreeResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19673F401BAF9C3C002CC363 /* FreeResponseViewController.swift */; };
+		19673F411BAF9C3C002CC363 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		19DCE3051BB8BB4A006FB33F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DCE3031BB8BB4A006FB33F /* Bolts.framework */; };
 		19DCE3061BB8BB4A006FB33F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DCE3041BB8BB4A006FB33F /* Parse.framework */; };
 		19DCE3081BB8BBCC006FB33F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DCE3071BB8BBCC006FB33F /* AudioToolbox.framework */; };
@@ -302,7 +302,7 @@
 				359944AA1BAB79E700F8540B /* AppDelegate.swift in Sources */,
 				359944DB1BAB9F4900F8540B /* NumericalViewController.swift in Sources */,
 				DF3962A81BCF78C9009E9D67 /* LoginViewController.m in Sources */,
-				19673F411BAF9C3C002CC363 /* FreeResponseViewController.swift in Sources */,
+				19673F411BAF9C3C002CC363 /* (null) in Sources */,
 				DFF6374B1BD631A5002B7699 /* FreeResponseViewController.swift in Sources */,
 				359944DF1BABA16500F8540B /* MultipleChoiceViewController.swift in Sources */,
 			);
