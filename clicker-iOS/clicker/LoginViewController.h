@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 
+@property (retain, nonatomic) NSURLConnection *connection;
+@property (retain, nonatomic) NSMutableData *receivedData;
 
 - (IBAction)goButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;

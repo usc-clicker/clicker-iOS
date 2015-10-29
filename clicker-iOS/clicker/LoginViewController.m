@@ -50,14 +50,14 @@
     else{
         self.goButton.enabled = (self.usernameTextField.text.length != 0) && (self.passwordTextField.text.length != 0);
     }
-//    [UIView animateWithDuration:0.5 animations:^{
-//        if (self.goButton.enabled) {
-//            self.goButton.backgroundColor = [UIColor yellowColor];
-//        }
-//        else{
-//            self.goButton.backgroundColor = [UIColor redColor];
-//        }
-//    }];
+    [UIView animateWithDuration:0.5 animations:^{
+        if (self.goButton.enabled) {
+            self.goButton.backgroundColor = [UIColor redColor];
+        }
+        else{
+            self.goButton.backgroundColor = [UIColor blackColor];
+        }
+    }];
     return self.goButton.enabled;
 }
 
@@ -89,15 +89,58 @@
 
 -(void)goButtonPressed:(id)sender {
     [self performSegueWithIdentifier:@"login" sender:self];
+    
     //API call
-    NSString *url_str = @"http://fontify.usc.edu";
-    [self send_request:url_str];
+    
+    NSString *post = [NSString stringWithFormat:@"bokunxu@gmail.com", @"password"];
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://fontify.usc.edu/auth/login"]];
+    
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody:postData];
+    
+    NSURLConnection *connected = [NSURLConnection connectionWithRequest:request delegate:self];
+    
+    if(connected) {
+        NSLog(@"Connection Successful");
+    } else {
+        NSLog(@"Connection could not be made");
+    }
+    
 }
 
-- (void)send_request:(NSString *)url_str {
-    NSURL *url = [NSURL URLWithString:url_str];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-    [NSURLConnection connectionWithRequest:request delegate:self];
+/*
+ this method might be calling more than one times according to incoming data size
+ */
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
+    [self.receivedData appendData:data];
+}
+/*
+ if there is an error occured, this method will be called by connection
+ */
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
+    
+    NSLog(@"%@" , error);
+}
+
+/*
+ if data is successfully received, this method will be called by connection
+ */
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection{
+    
+    //initialize convert the received data to string with UTF8 encoding
+    NSString *htmlSTR = [[NSString alloc] initWithData:self.receivedData
+                                              encoding:NSUTF8StringEncoding];
+    NSLog(@"%@" , htmlSTR);
+    //initialize a new webviewcontroller
+    //UIViewController *controller = [[UIViewController alloc] initWithString:htmlSTR];
+    
+    //show controller with navigation
+    //[self.navigationController pushViewController:controller animated:YES];
 }
 
 -(void)dealloc{
@@ -106,3 +149,23 @@
 
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
