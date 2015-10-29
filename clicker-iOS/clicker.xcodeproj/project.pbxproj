@@ -31,7 +31,9 @@
 		359944D91BAB947300F8540B /* MultipleChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944D81BAB947300F8540B /* MultipleChoiceTableViewCell.swift */; };
 		359944DB1BAB9F4900F8540B /* NumericalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944DA1BAB9F4900F8540B /* NumericalViewController.swift */; };
 		359944DF1BABA16500F8540B /* MultipleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */; };
-		DF3962A81BCF78C9009E9D67 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3962A71BCF78C9009E9D67 /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DF23F1681BE146320043EC0A /* JLCurrentClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF23F1671BE146320043EC0A /* JLCurrentClassViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DF23F16B1BE147F90043EC0A /* JLCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF23F16A1BE147F90043EC0A /* JLCoursesViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DF3962A81BCF78C9009E9D67 /* JLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DFF6374B1BD631A5002B7699 /* FreeResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -73,9 +75,13 @@
 		359944D81BAB947300F8540B /* MultipleChoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleChoiceTableViewCell.swift; sourceTree = "<group>"; };
 		359944DA1BAB9F4900F8540B /* NumericalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericalViewController.swift; sourceTree = "<group>"; };
 		359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleChoiceViewController.swift; sourceTree = "<group>"; };
+		DF23F1661BE146320043EC0A /* JLCurrentClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLCurrentClassViewController.h; sourceTree = "<group>"; };
+		DF23F1671BE146320043EC0A /* JLCurrentClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLCurrentClassViewController.m; sourceTree = "<group>"; };
+		DF23F1691BE147F90043EC0A /* JLCoursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLCoursesViewController.h; sourceTree = "<group>"; };
+		DF23F16A1BE147F90043EC0A /* JLCoursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLCoursesViewController.m; sourceTree = "<group>"; };
 		DF3962A51BCF78C8009E9D67 /* clicker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "clicker-Bridging-Header.h"; sourceTree = "<group>"; };
-		DF3962A61BCF78C9009E9D67 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		DF3962A71BCF78C9009E9D67 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		DF3962A61BCF78C9009E9D67 /* JLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLLoginViewController.h; sourceTree = "<group>"; };
+		DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLLoginViewController.m; sourceTree = "<group>"; };
 		DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeResponseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,9 +170,13 @@
 				359944B01BAB79E700F8540B /* Images.xcassets */,
 				359944B21BAB79E700F8540B /* LaunchScreen.xib */,
 				359944A71BAB79E700F8540B /* Supporting Files */,
-				DF3962A61BCF78C9009E9D67 /* LoginViewController.h */,
-				DF3962A71BCF78C9009E9D67 /* LoginViewController.m */,
+				DF3962A61BCF78C9009E9D67 /* JLLoginViewController.h */,
+				DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */,
 				DF3962A51BCF78C8009E9D67 /* clicker-Bridging-Header.h */,
+				DF23F1661BE146320043EC0A /* JLCurrentClassViewController.h */,
+				DF23F1671BE146320043EC0A /* JLCurrentClassViewController.m */,
+				DF23F1691BE147F90043EC0A /* JLCoursesViewController.h */,
+				DF23F16A1BE147F90043EC0A /* JLCoursesViewController.m */,
 			);
 			path = clicker;
 			sourceTree = "<group>";
@@ -246,6 +256,7 @@
 				TargetAttributes = {
 					359944A31BAB79E700F8540B = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 668VK7AL9G;
 					};
 					359944B81BAB79E700F8540B = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -298,10 +309,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				359944AC1BAB79E700F8540B /* ViewController.swift in Sources */,
+				DF23F16B1BE147F90043EC0A /* JLCoursesViewController.m in Sources */,
+				DF23F1681BE146320043EC0A /* JLCurrentClassViewController.m in Sources */,
 				359944D91BAB947300F8540B /* MultipleChoiceTableViewCell.swift in Sources */,
 				359944AA1BAB79E700F8540B /* AppDelegate.swift in Sources */,
 				359944DB1BAB9F4900F8540B /* NumericalViewController.swift in Sources */,
-				DF3962A81BCF78C9009E9D67 /* LoginViewController.m in Sources */,
+				DF3962A81BCF78C9009E9D67 /* JLLoginViewController.m in Sources */,
 				19673F411BAF9C3C002CC363 /* (null) in Sources */,
 				DFF6374B1BD631A5002B7699 /* FreeResponseViewController.swift in Sources */,
 				359944DF1BABA16500F8540B /* MultipleChoiceViewController.swift in Sources */,
@@ -363,7 +376,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Julia Lin (KHKUG6CRNW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Julia Lin (KHKUG6CRNW)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -384,6 +398,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "3c6283c8-0658-4c71-b4e6-1d48f3a0dc98";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -407,7 +422,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Julia Lin (KHKUG6CRNW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Julia Lin (KHKUG6CRNW)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -420,6 +436,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "3c6283c8-0658-4c71-b4e6-1d48f3a0dc98";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -431,14 +448,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = clicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "USC.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.uscclickerapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3c6283c8-0658-4c71-b4e6-1d48f3a0dc98";
 				SWIFT_OBJC_BRIDGING_HEADER = "clicker/clicker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -449,14 +469,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = clicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "USC.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.uscclickerapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3c6283c8-0658-4c71-b4e6-1d48f3a0dc98";
 				SWIFT_OBJC_BRIDGING_HEADER = "clicker/clicker-Bridging-Header.h";
 			};
 			name = Release;

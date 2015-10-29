@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+@interface JLLoginViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 

@@ -6,13 +6,13 @@
 //  Copyright © 2015 Univeristy of Southern California. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "JLLoginViewController.h"
 
-@interface LoginViewController () <UITextFieldDelegate>
+@interface JLLoginViewController () <UITextFieldDelegate>
 
 @end
 
-@implementation LoginViewController
+@implementation JLLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -88,7 +88,10 @@
 }
 
 -(void)goButtonPressed:(id)sender {
-    [self performSegueWithIdentifier:@"login" sender:self];
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:YES forKey:@"kLoggedIn"];
+    [defaults synchronize];
+    [self dismissViewControllerAnimated:YES completion:nil];
     //API call
     NSString *url_str = @"http://fontify.usc.edu";
     [self send_request:url_str];
