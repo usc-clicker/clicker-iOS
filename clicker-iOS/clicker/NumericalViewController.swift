@@ -12,6 +12,9 @@ class NumericalViewController: UIViewController {
 
     @IBOutlet var Time: UILabel!
     
+    @IBAction func submitButtonPressed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     var timeRemaining : Int = 15;
     
     override func viewDidLoad() {
@@ -34,7 +37,9 @@ class NumericalViewController: UIViewController {
             _ = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timeDown", userInfo: nil, repeats: false);
         }
         else {
-            self.navigationController?.popViewControllerAnimated(true);
+//            self.navigationController?.popViewControllerAnimated(true);
+            self.dismissViewControllerAnimated(true, completion: nil)
+
         }
         if timeRemaining < 10 {
             Time.text = "00:0" + String(timeRemaining);

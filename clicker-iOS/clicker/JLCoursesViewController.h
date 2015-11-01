@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JLCoursesViewController : UIViewController
+@interface JLCoursesViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

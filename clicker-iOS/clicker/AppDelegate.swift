@@ -29,10 +29,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        PFPush.handlePush(userInfo)
+        
+//        PFPush.handlePush(userInfo)
         if application.applicationState == UIApplicationState.Inactive {
             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
         }
+        
+        let rootViewController = self.window!.rootViewController as! UINavigationController
+        
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc : NumericalViewController = storyboard.instantiateViewControllerWithIdentifier("NumericalViewController") as! NumericalViewController
+        
+        let navigationController = UINavigationController(rootViewController: vc)
+        
+        rootViewController.presentViewController(navigationController, animated: true, completion: nil)
+        
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
