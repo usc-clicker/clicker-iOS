@@ -85,4 +85,6 @@
                 andCompletionHandler:completion];
 }
 
+// create method to enroll user in class, model it after above methods
+
 @end

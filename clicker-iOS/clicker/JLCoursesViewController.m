@@ -40,4 +40,9 @@
     return cell;
 }
 
+// plus button action method, model after goButtonPressed in LoginViewController
+// call method of JLAPIManager to enroll user in class
+// subscribe to parse channel
+// set callbacks
+
 @end
