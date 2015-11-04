@@ -31,10 +31,12 @@
 		359944D91BAB947300F8540B /* MultipleChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944D81BAB947300F8540B /* MultipleChoiceTableViewCell.swift */; };
 		359944DB1BAB9F4900F8540B /* NumericalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944DA1BAB9F4900F8540B /* NumericalViewController.swift */; };
 		359944DF1BABA16500F8540B /* MultipleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */; };
-		DF23F1681BE146320043EC0A /* JLCurrentClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF23F1671BE146320043EC0A /* JLCurrentClassViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DF23F16B1BE147F90043EC0A /* JLCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF23F16A1BE147F90043EC0A /* JLCoursesViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DF3962A81BCF78C9009E9D67 /* JLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DFF6374B1BD631A5002B7699 /* FreeResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DF23F1681BE146320043EC0A /* JLCurrentClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF23F1671BE146320043EC0A /* JLCurrentClassViewController.m */; };
+		DF23F16B1BE147F90043EC0A /* JLCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF23F16A1BE147F90043EC0A /* JLCoursesViewController.m */; };
+		DF3962A81BCF78C9009E9D67 /* JLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */; };
+		DFD94A2D1BE974CC001AC70D /* JLAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD94A2C1BE974CC001AC70D /* JLAPIManager.m */; };
+		DFD94A351BE99363001AC70D /* JLClickerUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD94A341BE99363001AC70D /* JLClickerUserManager.m */; };
+		DFF6374B1BD631A5002B7699 /* FreeResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,11 @@
 		DF3962A51BCF78C8009E9D67 /* clicker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "clicker-Bridging-Header.h"; sourceTree = "<group>"; };
 		DF3962A61BCF78C9009E9D67 /* JLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLLoginViewController.h; sourceTree = "<group>"; };
 		DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLLoginViewController.m; sourceTree = "<group>"; };
+		DFD94A2B1BE974CC001AC70D /* JLAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JLAPIManager.h; path = Manager/JLAPIManager.h; sourceTree = "<group>"; };
+		DFD94A2C1BE974CC001AC70D /* JLAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JLAPIManager.m; path = Manager/JLAPIManager.m; sourceTree = "<group>"; };
+		DFD94A2F1BE976AA001AC70D /* ClickerConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ClickerConstants.h; path = ../ClickerConstants.h; sourceTree = "<group>"; };
+		DFD94A331BE99363001AC70D /* JLClickerUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLClickerUserManager.h; sourceTree = "<group>"; };
+		DFD94A341BE99363001AC70D /* JLClickerUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLClickerUserManager.m; sourceTree = "<group>"; };
 		DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeResponseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,23 +167,15 @@
 		359944A61BAB79E700F8540B /* clicker */ = {
 			isa = PBXGroup;
 			children = (
-				359944A91BAB79E700F8540B /* AppDelegate.swift */,
-				359944AB1BAB79E700F8540B /* ViewController.swift */,
-				359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */,
-				359944DA1BAB9F4900F8540B /* NumericalViewController.swift */,
-				359944D81BAB947300F8540B /* MultipleChoiceTableViewCell.swift */,
-				DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */,
 				359944AD1BAB79E700F8540B /* Main.storyboard */,
 				359944B01BAB79E700F8540B /* Images.xcassets */,
 				359944B21BAB79E700F8540B /* LaunchScreen.xib */,
+				DFD94A321BE979C4001AC70D /* View */,
 				359944A71BAB79E700F8540B /* Supporting Files */,
-				DF3962A61BCF78C9009E9D67 /* JLLoginViewController.h */,
-				DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */,
+				DFD94A301BE97988001AC70D /* Manager */,
+				DFD94A311BE979A7001AC70D /* Controller */,
+				DFD94A2F1BE976AA001AC70D /* ClickerConstants.h */,
 				DF3962A51BCF78C8009E9D67 /* clicker-Bridging-Header.h */,
-				DF23F1661BE146320043EC0A /* JLCurrentClassViewController.h */,
-				DF23F1671BE146320043EC0A /* JLCurrentClassViewController.m */,
-				DF23F1691BE147F90043EC0A /* JLCoursesViewController.h */,
-				DF23F16A1BE147F90043EC0A /* JLCoursesViewController.m */,
 			);
 			path = clicker;
 			sourceTree = "<group>";
@@ -184,6 +183,7 @@
 		359944A71BAB79E700F8540B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				359944A91BAB79E700F8540B /* AppDelegate.swift */,
 				359944A81BAB79E700F8540B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -204,6 +204,42 @@
 				359944BE1BAB79E700F8540B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFD94A301BE97988001AC70D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DFD94A2B1BE974CC001AC70D /* JLAPIManager.h */,
+				DFD94A2C1BE974CC001AC70D /* JLAPIManager.m */,
+				DFD94A331BE99363001AC70D /* JLClickerUserManager.h */,
+				DFD94A341BE99363001AC70D /* JLClickerUserManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		DFD94A311BE979A7001AC70D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				359944AB1BAB79E700F8540B /* ViewController.swift */,
+				359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */,
+				359944DA1BAB9F4900F8540B /* NumericalViewController.swift */,
+				DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */,
+				DF3962A61BCF78C9009E9D67 /* JLLoginViewController.h */,
+				DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */,
+				DF23F1661BE146320043EC0A /* JLCurrentClassViewController.h */,
+				DF23F1671BE146320043EC0A /* JLCurrentClassViewController.m */,
+				DF23F1691BE147F90043EC0A /* JLCoursesViewController.h */,
+				DF23F16A1BE147F90043EC0A /* JLCoursesViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DFD94A321BE979C4001AC70D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				359944D81BAB947300F8540B /* MultipleChoiceTableViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,9 +344,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD94A2D1BE974CC001AC70D /* JLAPIManager.m in Sources */,
 				359944AC1BAB79E700F8540B /* ViewController.swift in Sources */,
 				DF23F16B1BE147F90043EC0A /* JLCoursesViewController.m in Sources */,
 				DF23F1681BE146320043EC0A /* JLCurrentClassViewController.m in Sources */,
+				DFD94A351BE99363001AC70D /* JLClickerUserManager.m in Sources */,
 				359944D91BAB947300F8540B /* MultipleChoiceTableViewCell.swift in Sources */,
 				359944AA1BAB79E700F8540B /* AppDelegate.swift in Sources */,
 				359944DB1BAB9F4900F8540B /* NumericalViewController.swift in Sources */,

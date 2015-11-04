@@ -7,6 +7,8 @@
 //
 
 #import "JLCurrentClassViewController.h"
+#import "ClickerConstants.h"
+#import "JLClickerUserManager.h"
 
 @interface JLCurrentClassViewController ()
 @property (nonatomic, strong) NSArray * arrayOfNavigationBarButtons;
@@ -20,11 +22,11 @@
     UIBarButtonItem *profileButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Profile"] style:UIBarButtonItemStylePlain target:self action:@selector(profileButtonPressed)];
     self.arrayOfNavigationBarButtons = [NSArray arrayWithObjects:classesButton, profileButton, nil];
     [self.navigationItem setRightBarButtonItems:self.arrayOfNavigationBarButtons];
-
+    [JLClickerUserManager setLoggedOut];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"kLoggedIn"] == nil || [[NSUserDefaults standardUserDefaults] objectForKey:@"kLoggedIn"] == NO) {
+    if (![JLClickerUserManager loggedIn]) {
         [self performSegueWithIdentifier:@"login" sender:self];
     }
 }

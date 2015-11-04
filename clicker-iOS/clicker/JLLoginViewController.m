@@ -7,6 +7,9 @@
 //
 
 #import "JLLoginViewController.h"
+#import "ClickerConstants.h"
+#import "JLAPIManager.h"
+#import "JLClickerUserManager.h"
 
 @interface JLLoginViewController () <UITextFieldDelegate>
 
@@ -20,6 +23,10 @@
     self.passwordTextField.delegate = self;
     self.goButton.enabled = NO;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardFrameDidChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    
+    self.usernameTextField.text = @"abc123@usc.edu";
+    self.passwordTextField.text = @"password";
+    self.goButton.enabled = YES;
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
@@ -65,8 +72,6 @@
     
     [self.passwordTextField resignFirstResponder];
     [self.usernameTextField resignFirstResponder];
-    // you can have multiple textfields here
-    
     
 }
 
@@ -88,20 +93,38 @@
 }
 
 -(void)goButtonPressed:(id)sender {
-    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setBool:YES forKey:@"kLoggedIn"];
-    [defaults synchronize];
-    [self dismissViewControllerAnimated:YES completion:nil];
-    //API call
-    NSString *url_str = @"http://fontify.usc.edu";
-    [self send_request:url_str];
+    [JLAPIManager loginWithUsername:self.usernameTextField.text
+                        andPassword:self.passwordTextField.text
+                      andCompletion:^(NSURLResponse * response, NSData * data, NSError * error) {
+                          NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                          NSLog(@"dictionary: %@", dictionary);
+                          if (dictionary[kErrorKey]) {
+                              [self loginFailedWithError:(dictionary[kErrorKey])];
+                          }
+                          else {
+                              [self loginSuccess];
+                          }
+                      }];
 }
 
-- (void)send_request:(NSString *)url_str {
-    NSURL *url = [NSURL URLWithString:url_str];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-    [NSURLConnection connectionWithRequest:request delegate:self];
+-(void)loginSuccess {
+    [JLClickerUserManager setLoggedIn];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+-(void)loginFailedWithError:(NSString *)error {
+    UIAlertController * ac = [UIAlertController alertControllerWithTitle:kLoginErrorTitle
+                                                                 message:error
+                                                          preferredStyle:UIAlertControllerStyleAlert];
+    
+    [ac addAction:[UIAlertAction actionWithTitle:kOkay
+                                           style:UIAlertActionStyleDefault
+                                         handler:nil]];
+    [self presentViewController:ac
+                       animated:YES
+                     completion:nil];
+}
+
 
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
