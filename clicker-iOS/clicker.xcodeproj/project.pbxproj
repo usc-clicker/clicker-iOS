@@ -36,6 +36,7 @@
 		DF3962A81BCF78C9009E9D67 /* JLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */; };
 		DFD94A2D1BE974CC001AC70D /* JLAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD94A2C1BE974CC001AC70D /* JLAPIManager.m */; };
 		DFD94A351BE99363001AC70D /* JLClickerUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD94A341BE99363001AC70D /* JLClickerUserManager.m */; };
+		DFD94A381BE997B8001AC70D /* JLCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD94A371BE997B8001AC70D /* JLCreateAccountViewController.m */; };
 		DFF6374B1BD631A5002B7699 /* FreeResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,8 @@
 		DFD94A2F1BE976AA001AC70D /* ClickerConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ClickerConstants.h; path = ../ClickerConstants.h; sourceTree = "<group>"; };
 		DFD94A331BE99363001AC70D /* JLClickerUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLClickerUserManager.h; sourceTree = "<group>"; };
 		DFD94A341BE99363001AC70D /* JLClickerUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLClickerUserManager.m; sourceTree = "<group>"; };
+		DFD94A361BE997B8001AC70D /* JLCreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JLCreateAccountViewC\U0010ontroller.h"; sourceTree = "<group>"; };
+		DFD94A371BE997B8001AC70D /* JLCreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JLCreateAccountViewC\U0010ontroller.m"; sourceTree = "<group>"; };
 		DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeResponseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -230,6 +233,8 @@
 				DF23F1671BE146320043EC0A /* JLCurrentClassViewController.m */,
 				DF23F1691BE147F90043EC0A /* JLCoursesViewController.h */,
 				DF23F16A1BE147F90043EC0A /* JLCoursesViewController.m */,
+				DFD94A361BE997B8001AC70D /* JLCreateAccountViewController.h */,
+				DFD94A371BE997B8001AC70D /* JLCreateAccountViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -345,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD94A2D1BE974CC001AC70D /* JLAPIManager.m in Sources */,
+				DFD94A381BE997B8001AC70D /* JLCreateAccountViewController.m in Sources */,
 				359944AC1BAB79E700F8540B /* ViewController.swift in Sources */,
 				DF23F16B1BE147F90043EC0A /* JLCoursesViewController.m in Sources */,
 				DF23F1681BE146320043EC0A /* JLCurrentClassViewController.m in Sources */,

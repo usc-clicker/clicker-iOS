@@ -10,7 +10,10 @@
 #import "ClickerConstants.h"
 
 @interface JLAPIManager : NSObject
-+(void)loginWithUsername:(NSString *)username
++(void)loginWithUsername:(NSString *)email
              andPassword:(NSString *)password
            andCompletion:(completionHandler)completion;
++(void)createAccountWithUsername:(NSString *)email
+                     andPassword:(NSString *)password
+                   andCompletion:(completionHandler)completion;
 @end

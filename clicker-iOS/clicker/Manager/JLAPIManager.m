@@ -51,16 +51,32 @@
     
 }
 
-+(void)loginWithUsername:(NSString *)username
++(void)loginWithUsername:(NSString *)email
              andPassword:(NSString *)password
            andCompletion:(completionHandler)completion {
-    NSLog(@"USERNAME: %@", username);
+    NSLog(@"USERNAME: %@", email);
     NSLog(@"PASSWORD: %@", password);
     
     NSString * urlString = [NSString stringWithFormat:@"%@/auth/login", BASE_URL];
-    NSURL * url = [NSURL URLWithString:urlString];
     
-    NSString * body = [NSString stringWithFormat:@"email=%@&password=%@", username, password];
+    NSString * body = [NSString stringWithFormat:@"email=%@&password=%@", email, password];
+    [body stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    [JLAPIManager makeRequestwithURL:urlString
+                           andMethod:POST
+                             andBody:body
+                andCompletionHandler:completion];
+}
+
++(void)createAccountWithUsername:(NSString *)email
+             andPassword:(NSString *)password
+           andCompletion:(completionHandler)completion {
+    NSLog(@"USERNAME: %@", email);
+    NSLog(@"PASSWORD: %@", password);
+    
+    NSString * urlString = [NSString stringWithFormat:@"%@/auth/register", BASE_URL];
+    
+    NSString * body = [NSString stringWithFormat:@"email=%@&password=%@", email, password];
     [body stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     [JLAPIManager makeRequestwithURL:urlString

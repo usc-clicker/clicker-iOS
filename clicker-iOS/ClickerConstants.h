@@ -19,6 +19,8 @@ typedef enum {
 #define kOkay @"Okay"
 #define kLoginErrorTitle @"Login Error!"
 
+#define completionParams NSURLResponse * response, NSData * data, NSError * error
+
 #define BASE_URL @"http://fontify.usc.edu"
 
 typedef void (^completionHandler)(NSURLResponse *response, NSData *data, NSError *error);
