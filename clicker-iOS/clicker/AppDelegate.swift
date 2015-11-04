@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         installation.saveInBackground()
     }
     
+    
+    // rigjogiaejgp
+    
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
         if error.code == 3010 {
             print("Push notifications are not supported in the iOS Simulator.")
