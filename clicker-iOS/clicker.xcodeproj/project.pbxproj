@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		19673F411BAF9C3C002CC363 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		19A7C1061BEC1AB6003CF224 /* MXProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A7C1051BEC1AB6003CF224 /* MXProfileViewController.m */; };
 		19B08A2E1BE9D46500411BC2 /* MXCoursesInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B08A2D1BE9D46500411BC2 /* MXCoursesInputViewController.m */; };
 		19DCE3051BB8BB4A006FB33F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DCE3031BB8BB4A006FB33F /* Bolts.framework */; };
 		19DCE3061BB8BB4A006FB33F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DCE3041BB8BB4A006FB33F /* Parse.framework */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19A7C1041BEC1AB6003CF224 /* MXProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXProfileViewController.h; path = ../MXProfileViewController.h; sourceTree = "<group>"; };
+		19A7C1051BEC1AB6003CF224 /* MXProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXProfileViewController.m; path = ../MXProfileViewController.m; sourceTree = "<group>"; };
 		19B08A2C1BE9D46500411BC2 /* MXCoursesInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXCoursesInputViewController.h; path = ../MXCoursesInputViewController.h; sourceTree = "<group>"; };
 		19B08A2D1BE9D46500411BC2 /* MXCoursesInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXCoursesInputViewController.m; path = ../MXCoursesInputViewController.m; sourceTree = "<group>"; };
 		19DCE3031BB8BB4A006FB33F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -230,6 +233,8 @@
 				359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */,
 				359944DA1BAB9F4900F8540B /* NumericalViewController.swift */,
 				DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */,
+				19A7C1041BEC1AB6003CF224 /* MXProfileViewController.h */,
+				19A7C1051BEC1AB6003CF224 /* MXProfileViewController.m */,
 				DF3962A61BCF78C9009E9D67 /* JLLoginViewController.h */,
 				DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */,
 				19B08A2C1BE9D46500411BC2 /* MXCoursesInputViewController.h */,
@@ -366,6 +371,7 @@
 				19B08A2E1BE9D46500411BC2 /* MXCoursesInputViewController.m in Sources */,
 				DF3962A81BCF78C9009E9D67 /* JLLoginViewController.m in Sources */,
 				19673F411BAF9C3C002CC363 /* (null) in Sources */,
+				19A7C1061BEC1AB6003CF224 /* MXProfileViewController.m in Sources */,
 				DFF6374B1BD631A5002B7699 /* FreeResponseViewController.swift in Sources */,
 				359944DF1BABA16500F8540B /* MultipleChoiceViewController.swift in Sources */,
 			);
@@ -500,6 +506,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -521,6 +528,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

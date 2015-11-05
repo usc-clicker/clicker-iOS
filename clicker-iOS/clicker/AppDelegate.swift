@@ -59,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("4dWxGYc9wzZRtcxzL3wXne6gmJiLfKut5AA4H4xL",
             clientKey: "e8t0sCOUyo8FFD7RuDUq6GIS4ccJ51GxQX17P15p")
         
+        self.window!.tintColor = UIColor.whiteColor()
         
         // Register for Push Notitications
         if application.applicationState != UIApplicationState.Background {

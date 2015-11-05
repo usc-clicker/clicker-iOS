@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.usernameTextField.delegate = self;
     self.passwordTextField.delegate = self;
     self.goButton.enabled = NO;
