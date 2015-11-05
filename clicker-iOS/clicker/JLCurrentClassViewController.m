@@ -36,7 +36,7 @@
 }
 
 -(void) profileButtonPressed {
-    
+    [self performSegueWithIdentifier:@"profile" sender:self];
 }
 
 @end

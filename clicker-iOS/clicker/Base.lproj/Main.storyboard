@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPo-XN-MmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-22" y="252"/>
+            <point key="canvasLocation" x="1025" y="254"/>
         </scene>
         <!--Free Response View Controller-->
         <scene sceneID="te8-0W-QEc">
@@ -150,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Wv-6F-VoF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-22" y="941"/>
+            <point key="canvasLocation" x="438" y="943"/>
         </scene>
         <!--Multiple Choice View Controller-->
         <scene sceneID="01O-o1-wIa">
@@ -267,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihl-mP-2Dm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-22" y="-442"/>
+            <point key="canvasLocation" x="1025" y="-440"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="gYu-dI-esG">
@@ -490,6 +490,26 @@
             </objects>
             <point key="canvasLocation" x="-781.5" y="638.5"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="t0x-c8-P58">
+            <objects>
+                <viewController id="Rbr-mT-NvS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KPt-8O-w7E"/>
+                        <viewControllerLayoutGuide type="bottom" id="8nO-Go-lpf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4bd-sG-XmS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="BMA-DS-iZG"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ih4-OV-8dV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1242.5" y="-851.5"/>
+        </scene>
         <!--Courses-->
         <scene sceneID="pzn-4U-86d">
             <objects>
@@ -545,7 +565,13 @@
                             <constraint firstItem="ZZy-oM-VOO" firstAttribute="top" secondItem="Vp6-SK-DDe" secondAttribute="top" id="uw2-Ea-ecu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Courses" id="dhh-uy-vM3"/>
+                    <navigationItem key="navigationItem" title="Courses" id="dhh-uy-vM3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yIc-Ci-AJP">
+                            <connections>
+                                <segue destination="I6s-Bj-aLC" kind="modal" id="MRS-qv-ROg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="ZZy-oM-VOO" id="8at-ij-hFs"/>
@@ -554,6 +580,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyR-r7-en5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1242.5" y="-121.5"/>
+        </scene>
+        <!--Courses Input View Controller-->
+        <scene sceneID="unu-0F-Waz">
+            <objects>
+                <viewController id="fem-fN-LrN" customClass="MXCoursesInputViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cL7-Fi-AKD"/>
+                        <viewControllerLayoutGuide type="bottom" id="XcE-Fv-z1r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VTk-pC-jod">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class ID e.g. CSCI-101" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3g-tT-8n6">
+                                <rect key="frame" x="20" y="167" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Section ID e.g. 29834" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xE3-xG-SaS">
+                                <rect key="frame" x="20" y="319" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c3g-tT-8n6" firstAttribute="top" secondItem="cL7-Fi-AKD" secondAttribute="bottom" constant="103" id="GdF-Ci-lkp"/>
+                            <constraint firstItem="c3g-tT-8n6" firstAttribute="centerX" secondItem="VTk-pC-jod" secondAttribute="centerX" id="eGM-5F-NAn"/>
+                            <constraint firstItem="xE3-xG-SaS" firstAttribute="leading" secondItem="c3g-tT-8n6" secondAttribute="leading" id="fj6-I1-dFN"/>
+                            <constraint firstItem="c3g-tT-8n6" firstAttribute="leading" secondItem="VTk-pC-jod" secondAttribute="leadingMargin" constant="4" id="oPy-VK-naE"/>
+                            <constraint firstItem="xE3-xG-SaS" firstAttribute="trailing" secondItem="c3g-tT-8n6" secondAttribute="trailing" id="pef-en-VoV"/>
+                            <constraint firstItem="xE3-xG-SaS" firstAttribute="centerY" secondItem="VTk-pC-jod" secondAttribute="centerY" id="zH3-bN-Phd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="glz-jH-nbm">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Bxi-GZ-Idh">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="fem-fN-LrN" id="0IX-na-ilm"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="SN5-7V-RIr">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="fem-fN-LrN" id="0br-p5-w4v"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="Bxi-GZ-Idh" id="h3X-4I-bpO"/>
+                        <outlet property="courseField" destination="c3g-tT-8n6" id="eSR-37-QRf"/>
+                        <outlet property="saveButton" destination="SN5-7V-RIr" id="FqP-Yf-wtE"/>
+                        <outlet property="sectionField" destination="xE3-xG-SaS" id="FVP-S2-a0O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tY-tg-U7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194.5" y="-121.5"/>
         </scene>
         <!--Current Class View Controller-->
         <scene sceneID="BkG-uL-Q8r">
@@ -589,6 +672,7 @@
                     <connections>
                         <segue destination="KRq-EA-yCI" kind="presentation" identifier="login" id="OfK-vQ-009"/>
                         <segue destination="MWj-s8-g96" kind="show" identifier="classes" id="FCh-cO-H4g"/>
+                        <segue destination="Rbr-mT-NvS" kind="show" identifier="profile" id="H33-nV-3la"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ljg-eF-xcm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -613,8 +697,44 @@
             </objects>
             <point key="canvasLocation" x="-2391" y="252"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="gfb-yt-HSV">
+            <objects>
+                <viewController id="NEp-M2-zwo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1w2-CT-ETe"/>
+                        <viewControllerLayoutGuide type="bottom" id="OfG-fR-s1h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uKb-I0-iwD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXO-26-wql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1027" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yp9-8o-MZw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I6s-Bj-aLC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vjK-ga-i6J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fem-fN-LrN" kind="relationship" relationship="rootViewController" id="yXs-6b-QHC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJ0-Bk-sfb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-781.5" y="-121.5"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Circled 1 Filled-50.png" width="465" height="448"/>
+        <image name="Circled 1 Filled-50.png" width="25" height="25"/>
     </resources>
 </document>

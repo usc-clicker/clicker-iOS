@@ -86,5 +86,36 @@
 }
 
 // create method to enroll user in class, model it after above methods
+// MX
++(void)enrollClassWithUsername:(NSString *)email
+                  andSection:(int )section
+                 andCompletion:(completionHandler)completion {
+    NSLog(@"USERNAME: %@", email);
+    NSLog(@"SECTION: %d", section);
+
+    NSString * urlString = [NSString stringWithFormat:@"%@/user/enroll", BASE_URL];
+    
+    NSString * body = [NSString stringWithFormat:@"email=%@&sectionid=%d", email, section];
+    [body stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    [JLAPIManager makeRequestwithURL:urlString
+                           andMethod:POST
+                             andBody:body
+                andCompletionHandler:completion];
+}
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+

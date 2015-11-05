@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		19673F411BAF9C3C002CC363 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		19B08A2E1BE9D46500411BC2 /* MXCoursesInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B08A2D1BE9D46500411BC2 /* MXCoursesInputViewController.m */; };
 		19DCE3051BB8BB4A006FB33F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DCE3031BB8BB4A006FB33F /* Bolts.framework */; };
 		19DCE3061BB8BB4A006FB33F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DCE3041BB8BB4A006FB33F /* Parse.framework */; };
 		19DCE3081BB8BBCC006FB33F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DCE3071BB8BBCC006FB33F /* AudioToolbox.framework */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19B08A2C1BE9D46500411BC2 /* MXCoursesInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXCoursesInputViewController.h; path = ../MXCoursesInputViewController.h; sourceTree = "<group>"; };
+		19B08A2D1BE9D46500411BC2 /* MXCoursesInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXCoursesInputViewController.m; path = ../MXCoursesInputViewController.m; sourceTree = "<group>"; };
 		19DCE3031BB8BB4A006FB33F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		19DCE3041BB8BB4A006FB33F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		19DCE3071BB8BBCC006FB33F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -229,6 +232,8 @@
 				DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */,
 				DF3962A61BCF78C9009E9D67 /* JLLoginViewController.h */,
 				DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */,
+				19B08A2C1BE9D46500411BC2 /* MXCoursesInputViewController.h */,
+				19B08A2D1BE9D46500411BC2 /* MXCoursesInputViewController.m */,
 				DF23F1661BE146320043EC0A /* JLCurrentClassViewController.h */,
 				DF23F1671BE146320043EC0A /* JLCurrentClassViewController.m */,
 				DF23F1691BE147F90043EC0A /* JLCoursesViewController.h */,
@@ -297,7 +302,7 @@
 				TargetAttributes = {
 					359944A31BAB79E700F8540B = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = 668VK7AL9G;
+						DevelopmentTeam = Q9F9632JA4;
 					};
 					359944B81BAB79E700F8540B = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -358,6 +363,7 @@
 				359944D91BAB947300F8540B /* MultipleChoiceTableViewCell.swift in Sources */,
 				359944AA1BAB79E700F8540B /* AppDelegate.swift in Sources */,
 				359944DB1BAB9F4900F8540B /* NumericalViewController.swift in Sources */,
+				19B08A2E1BE9D46500411BC2 /* MXCoursesInputViewController.m in Sources */,
 				DF3962A81BCF78C9009E9D67 /* JLLoginViewController.m in Sources */,
 				19673F411BAF9C3C002CC363 /* (null) in Sources */,
 				DFF6374B1BD631A5002B7699 /* FreeResponseViewController.swift in Sources */,
@@ -420,8 +426,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Julia Lin (KHKUG6CRNW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Julia Lin (KHKUG6CRNW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bokun Xu (Z7HN5TQRZH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bokun Xu (Z7HN5TQRZH)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -442,7 +448,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "3c6283c8-0658-4c71-b4e6-1d48f3a0dc98";
+				PROVISIONING_PROFILE = "b8df0a2f-f481-4070-a716-88ec43a52c8e";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,8 +472,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Julia Lin (KHKUG6CRNW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Julia Lin (KHKUG6CRNW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bokun Xu (Z7HN5TQRZH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bokun Xu (Z7HN5TQRZH)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -480,7 +486,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "3c6283c8-0658-4c71-b4e6-1d48f3a0dc98";
+				PROVISIONING_PROFILE = "b8df0a2f-f481-4070-a716-88ec43a52c8e";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -500,9 +506,9 @@
 				);
 				INFOPLIST_FILE = clicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.uscclickerapp;
+				PRODUCT_BUNDLE_IDENTIFIER = Q9F9632JA4.usc.edu.myClicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3c6283c8-0658-4c71-b4e6-1d48f3a0dc98";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "clicker/clicker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -521,9 +527,9 @@
 				);
 				INFOPLIST_FILE = clicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.uscclickerapp;
+				PRODUCT_BUNDLE_IDENTIFIER = Q9F9632JA4.usc.edu.myClicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3c6283c8-0658-4c71-b4e6-1d48f3a0dc98";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "clicker/clicker-Bridging-Header.h";
 			};
 			name = Release;

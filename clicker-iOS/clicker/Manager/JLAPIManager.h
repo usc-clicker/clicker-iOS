@@ -16,4 +16,7 @@
 +(void)createAccountWithUsername:(NSString *)email
                      andPassword:(NSString *)password
                    andCompletion:(completionHandler)completion;
++(void)enrollClassWithUsername:(NSString *)email
+                  andSectionID:(int )section
+                 andCompletion:(completionHandler)completion;
 @end

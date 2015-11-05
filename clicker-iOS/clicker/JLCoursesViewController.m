@@ -7,6 +7,7 @@
 //
 
 #import "JLCoursesViewController.h"
+#import "MXCoursesInputViewController.h"
 
 @interface JLCoursesViewController ()
 

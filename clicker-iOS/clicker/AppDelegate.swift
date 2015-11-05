@@ -17,8 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         let installation = PFInstallation.currentInstallation()
         installation.setDeviceTokenFromData(deviceToken)
+        //installation.addUniqueObject("Students", forKey: "channels")
         installation.saveInBackground()
-    }
+        
+        let currentInstallation = PFInstallation.currentInstallation()
+        currentInstallation.addUniqueObject("Students", forKey: "channels")
+        currentInstallation.saveInBackground()
+}
     
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
@@ -54,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("4dWxGYc9wzZRtcxzL3wXne6gmJiLfKut5AA4H4xL",
             clientKey: "e8t0sCOUyo8FFD7RuDUq6GIS4ccJ51GxQX17P15p")
         
+        
         // Register for Push Notitications
         if application.applicationState != UIApplicationState.Background {
             // Track an app open here if we launch with a push, unless
@@ -82,6 +88,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application.registerForRemoteNotificationTypes(types)
         }
         
+        let currentInstallation = PFInstallation.currentInstallation()
+        currentInstallation.addUniqueObject("Students", forKey: "channels")
+        currentInstallation.saveInBackground()
+        
         return true
     }
 
@@ -93,14 +103,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        let currentInstallation = PFInstallation.currentInstallation()
+        currentInstallation.addUniqueObject("Students", forKey: "channels")
+        currentInstallation.saveInBackground()
+        
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        
+        let currentInstallation = PFInstallation.currentInstallation()
+        currentInstallation.addUniqueObject("Students", forKey: "channels")
+        currentInstallation.saveInBackground()
+        
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        let currentInstallation = PFInstallation.currentInstallation()
+        currentInstallation.addUniqueObject("Students", forKey: "channels")
+        currentInstallation.saveInBackground()
+       
     }
 
     func applicationWillTerminate(application: UIApplication) {
