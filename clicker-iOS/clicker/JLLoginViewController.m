@@ -110,6 +110,7 @@
 
 -(void)loginSuccess {
     [JLClickerUserManager setLoggedIn];
+    //NSLog(@"login success");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

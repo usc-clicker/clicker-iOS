@@ -27,15 +27,17 @@
 //        }
 //    }
     
+    //
+    //self.navigationController.navigationBar.barStyle = 1;
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor colorWithRed:0.55 green:0.00 blue:0.10 alpha:1.0]];
     
     [_classLabel setFont:[UIFont fontWithName:@"Helvetica" size:27.0]];
     
-    UIBarButtonItem *classesButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Courses"] style:UIBarButtonItemStylePlain target:self action:@selector(classesButtonPressed)];
+    UIBarButtonItem *classesButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Books"] style:UIBarButtonItemStylePlain target:self action:@selector(classesButtonPressed)];
     //[classesButton setTintColor:[UIColor whiteColor]];
     
-    UIBarButtonItem *profileButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Profile"] style:UIBarButtonItemStylePlain target:self action:@selector(profileButtonPressed)];
+    UIBarButtonItem *profileButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Person"] style:UIBarButtonItemStylePlain target:self action:@selector(profileButtonPressed)];
     //[profileButton setTintColor:[UIColor whiteColor]];
     
     self.arrayOfNavigationBarButtons = [NSArray arrayWithObjects:classesButton, profileButton, nil];
