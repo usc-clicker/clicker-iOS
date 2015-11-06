@@ -641,7 +641,7 @@
             </objects>
             <point key="canvasLocation" x="-430.5" y="-121.5"/>
         </scene>
-        <!--Enroll-->
+        <!--Courses Input View Controller-->
         <scene sceneID="unu-0F-Waz">
             <objects>
                 <viewController id="fem-fN-LrN" customClass="MXCoursesInputViewController" sceneMemberID="viewController">
@@ -670,7 +670,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Enroll" id="glz-jH-nbm">
+                    <navigationItem key="navigationItem" id="glz-jH-nbm">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Bxi-GZ-Idh">
                             <connections>
                                 <action selector="cancelButtonTapped:" destination="fem-fN-LrN" id="0IX-na-ilm"/>
@@ -706,26 +706,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT CLASS: HIST 100" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8B-mU-EZS">
-                                <rect key="frame" x="62" y="284" width="250" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="0gz-cO-aGG"/>
-                                    <constraint firstAttribute="width" constant="250" id="ryj-Z4-xE0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.71091777150000002" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kyc-i8-fpE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="32"/>
                                 <color key="backgroundColor" red="0.54134961749851451" green="0.069205415015417965" blue="0.12109732766612591" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="geX-TH-nMz">
+                                <rect key="frame" x="75" y="161" width="225" height="225"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CURRENT CLASS: HIST 100" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8B-mU-EZS">
+                                <rect key="frame" x="53" y="442" width="268" height="112"/>
+                                <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="25"/>
+                                <color key="textColor" red="0.71091777150000002" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="c8B-mU-EZS" firstAttribute="centerX" secondItem="eiX-7v-Fcs" secondAttribute="centerX" id="So8-t9-1r3"/>
-                            <constraint firstItem="c8B-mU-EZS" firstAttribute="centerY" secondItem="eiX-7v-Fcs" secondAttribute="centerY" id="svc-4V-X83"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I6q-mY-Zph">
                         <nil key="title"/>
@@ -783,5 +778,6 @@
     <resources>
         <image name="Circled 1 Filled-50.png" width="25" height="25"/>
         <image name="Gear" width="25" height="25"/>
+        <image name="checkmark" width="512" height="512"/>
     </resources>
 </document>
