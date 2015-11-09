@@ -9,7 +9,11 @@
 import UIKit
 
 class MultipleChoiceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    var questionString : NSString = "";
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBAction func submittButtonAction(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     @IBOutlet var Time: UILabel!
     
     var timeRemaining : Int = 15;
@@ -18,6 +22,7 @@ class MultipleChoiceViewController: UIViewController, UITableViewDelegate, UITab
         super.viewDidLoad()
 
         Time.text = "00:15";
+        questionLabel.text = questionString as String;
         
         // Do any additional setup after loading the view.
         _ = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timeDown", userInfo: nil, repeats: false);
@@ -33,7 +38,7 @@ class MultipleChoiceViewController: UIViewController, UITableViewDelegate, UITab
             _ = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timeDown", userInfo: nil, repeats: false);
         }
         else {
-            self.navigationController?.popViewControllerAnimated(true);
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
         if timeRemaining < 10 {
             Time.text = "00:0" + String(timeRemaining);
@@ -76,7 +81,9 @@ class MultipleChoiceViewController: UIViewController, UITableViewDelegate, UITab
         return cell;
     }
     
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -44,7 +44,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootViewController = self.window!.rootViewController as! UINavigationController
         
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc : NumericalViewController = storyboard.instantiateViewControllerWithIdentifier("NumericalViewController") as! NumericalViewController
+        let vc : MultipleChoiceViewController = storyboard.instantiateViewControllerWithIdentifier("MultipleChoiceViewController") as! MultipleChoiceViewController
+        
+//        if let question = userInfo["question"] as? NSString {
+//
+//        }
+        /*if let structure = Array(userInfo.keys)[4] {
+            vc.questionLabel.text = structure.valueForAttribute("question") as? String;
+        }*/
+        var questionString = userInfo["question"] as! String;
+        vc.questionString = questionString;
+//        vc.questionLabel.text = "TEST";
+        //let castedDict = userInfo as! Dictionary<String, String>;
+       // var castedArray = userInfo as Array<Dictionary<String,AnyObject>>();
+        //let index = castedDict["question"];
         
         let navigationController = UINavigationController(rootViewController: vc)
         
@@ -54,6 +67,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var tempDict = [
+            "Cheese": 0.03
+        ]
         
         //Parse ID
         Parse.setApplicationId("4dWxGYc9wzZRtcxzL3wXne6gmJiLfKut5AA4H4xL",
