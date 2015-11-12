@@ -19,7 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
+
 //    for (NSString *familyName in [UIFont familyNames]) {
 //        NSLog(@"%@", familyName);
 //        for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {

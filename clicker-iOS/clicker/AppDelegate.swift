@@ -62,17 +62,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-//        var tempDict = [
-//            "Cheese": 0.03
-//        ]
-        
         //Parse ID
         Parse.setApplicationId("4dWxGYc9wzZRtcxzL3wXne6gmJiLfKut5AA4H4xL",
             clientKey: "e8t0sCOUyo8FFD7RuDUq6GIS4ccJ51GxQX17P15p")
         
-        self.window!.tintColor = UIColor.whiteColor()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default);
-        UINavigationBar.appearance().backgroundColor = UIColor(red: 0.55, green: 0.0, blue: 0.10, alpha: 1.0);
+//        self.window!.tintColor = UIColor.whiteColor()
+//        UINavigationBar.appearance().setBackgroundImage(nil, forBarMetrics: UIBarMetrics.DefaultPrompt);
+        UINavigationBar.appearance().backgroundColor = UIColor.redColor();
+        UINavigationBar.appearance().translucent = false;
 
         // Register for Push Notitications
         if application.applicationState != UIApplicationState.Background {

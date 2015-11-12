@@ -18,8 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.navigationController.navigationBar
-     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+//    [self.navigationController.navigationBar
+//     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 }
 
 - (void)didReceiveMemoryWarning {
