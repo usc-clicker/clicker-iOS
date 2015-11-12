@@ -42,7 +42,6 @@
     
     self.arrayOfNavigationBarButtons = [NSArray arrayWithObjects:classesButton, profileButton, nil];
     [self.navigationItem setRightBarButtonItems:self.arrayOfNavigationBarButtons];
-    [JLClickerUserManager setLoggedOut];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
