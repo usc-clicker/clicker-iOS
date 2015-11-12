@@ -1,5 +1,5 @@
 //
-//  JLCreateAccountViewController.h
+//  JLCreateAccountViewController.h
 //  clicker
 //
 //  Created by Julia Lin on 11/3/15.

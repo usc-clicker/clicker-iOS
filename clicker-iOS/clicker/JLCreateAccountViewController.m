@@ -6,7 +6,7 @@
 //  Copyright © 2015 Univeristy of Southern California. All rights reserved.
 //
 
-#import "JLCreateAccountViewController.h"
+#import "JLCreateAccountViewController.h"
 #import "ClickerConstants.h"
 #import "JLAPIManager.h"
 #import "JLClickerUserManager.h"
