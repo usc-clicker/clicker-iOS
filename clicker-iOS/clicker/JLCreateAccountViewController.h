@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JLCreateAccountViewController : UITableViewController
+@protocol CreateAccountViewControllerProtocol <NSObject>
 
+-(void)dismiss;
+
+@end
+
+@interface JLCreateAccountViewController : UITableViewController
+@property (nonatomic, weak) id delegate;
 @end

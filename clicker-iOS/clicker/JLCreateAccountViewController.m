@@ -9,6 +9,7 @@
 #import "JLCreateAccountViewController.h"
 #import "ClickerConstants.h"
 #import "JLAPIManager.h"
+#import "JLClickerUserManager.h"
 
 @interface JLCreateAccountViewController ()
 
@@ -35,9 +36,10 @@
                               NSLog(@"error: %@", dictionary[kErrorKey]);
                           }
                           else {
-                              UIViewController * parent = self.parentViewController;
+                              NSString * userID = dictionary[@"auth"][@"id"];
+                              [JLClickerUserManager setLoggedIn:userID];
                               [self dismissViewControllerAnimated:YES completion:^{
-                                  [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
+                                  [self.delegate dismiss];
                               }];
                           }
                       }];
