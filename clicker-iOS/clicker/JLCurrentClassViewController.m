@@ -29,8 +29,6 @@
     
     //
     //self.navigationController.navigationBar.barStyle = 1;
-    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setBackgroundColor:[UIColor colorWithRed:0.55 green:0.00 blue:0.10 alpha:1.0]];
     
     [_classLabel setFont:[UIFont fontWithName:@"Helvetica" size:27.0]];
     

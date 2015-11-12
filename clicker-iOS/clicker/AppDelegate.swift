@@ -71,7 +71,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             clientKey: "e8t0sCOUyo8FFD7RuDUq6GIS4ccJ51GxQX17P15p")
         
         self.window!.tintColor = UIColor.whiteColor()
-        
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default);
+        UINavigationBar.appearance().backgroundColor = UIColor(red: 0.55, green: 0.0, blue: 0.10, alpha: 1.0);
+
         // Register for Push Notitications
         if application.applicationState != UIApplicationState.Background {
             // Track an app open here if we launch with a push, unless
