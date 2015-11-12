@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4WP-qD-T9r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4WP-qD-T9r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -342,7 +342,7 @@
                                     <color key="titleColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="u6G-Zx-OS7" kind="presentation" id="PuN-J4-2VB"/>
+                                    <action selector="createAccountAction:" destination="KRq-EA-yCI" eventType="touchUpInside" id="JIA-qp-sfT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -384,6 +384,7 @@
                         <outlet property="goButton" destination="kr4-Y5-hJo" id="hzb-uR-4dS"/>
                         <outlet property="passwordTextField" destination="q9I-Hf-l0g" id="6X0-t2-lc0"/>
                         <outlet property="usernameTextField" destination="Bz7-5p-GRC" id="tKo-BF-6qo"/>
+                        <segue destination="u6G-Zx-OS7" kind="show" identifier="createAccount" id="bnv-eu-FQO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbC-NO-xvg" userLabel="First Responder" sceneMemberID="firstResponder"/>

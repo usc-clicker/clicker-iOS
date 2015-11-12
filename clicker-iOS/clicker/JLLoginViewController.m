@@ -103,13 +103,14 @@
                               [self loginFailedWithError:(dictionary[kErrorKey])];
                           }
                           else {
-                              [self loginSuccess];
+                              NSString * userID = dictionary[@"auth"][@"id"];
+                              [self loginSuccess:userID];
                           }
                       }];
 }
 
--(void)loginSuccess {
-    [JLClickerUserManager setLoggedIn];
+-(void)loginSuccess:(NSString *)userID {
+    [JLClickerUserManager setLoggedIn:userID];
     //NSLog(@"login success");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -127,10 +128,24 @@
                      completion:nil];
 }
 
+-(void)dismiss {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 
 
+- (IBAction)createAccountAction:(id)sender {
+    [self performSegueWithIdentifier:@"createAccount" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"createAccount"]) {
+        JLCreateAccountViewController * vc = segue.destinationViewController;
+        vc.delegate = self;
+    }
+}
 @end

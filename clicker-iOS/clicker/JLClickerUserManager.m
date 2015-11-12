@@ -11,19 +11,22 @@
 
 @implementation JLClickerUserManager
 +(BOOL)loggedIn {
-    BOOL test = [[[NSUserDefaults standardUserDefaults] objectForKey:kLoggedIn] boolValue];
-    NSLog(@"test: %d", test);
-    return test;
+    if([[NSUserDefaults standardUserDefaults] objectForKey:kLoggedIn])
+        return YES;
+    else return NO;
 }
-+(void)setLoggedIn {
++(void)setLoggedIn:(NSString *)userID {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setBool:YES forKey:kLoggedIn];
+    [defaults setObject:userID forKey:kLoggedIn];
     [defaults synchronize];
 }
 +(void)setLoggedOut {
-    
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObjectForKey:kLoggedIn];
     [defaults synchronize];
+}
++(NSString *)user {
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    return [defaults objectForKey:kLoggedIn];
 }
 @end

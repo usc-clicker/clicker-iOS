@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JLCreateAccountViewController.h"
 
-@interface JLLoginViewController : UIViewController
+@interface JLLoginViewController : UIViewController <CreateAccountViewControllerProtocol>
 
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 
@@ -16,5 +17,6 @@
 - (IBAction)goButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+- (IBAction)createAccountAction:(id)sender;
 
 @end

@@ -36,12 +36,12 @@
 		DF23F1681BE146320043EC0A /* JLCurrentClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF23F1671BE146320043EC0A /* JLCurrentClassViewController.m */; };
 		DF23F16B1BE147F90043EC0A /* JLCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF23F16A1BE147F90043EC0A /* JLCoursesViewController.m */; };
 		DF3962A81BCF78C9009E9D67 /* JLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */; };
+		DF72CC931BF4B6930072CA6C /* JLCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF72CC921BF4B6930072CA6C /* JLCreateAccountViewController.m */; };
 		DF9F37F11BF1A88000418172 /* JLFreeResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9F37F01BF1A88000418172 /* JLFreeResponseViewController.m */; };
 		DF9F37F41BF1A91B00418172 /* JLNumericalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9F37F31BF1A91B00418172 /* JLNumericalViewController.m */; };
 		DF9F37F71BF1A93500418172 /* JLMultipleChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9F37F61BF1A93500418172 /* JLMultipleChoiceViewController.m */; };
 		DFD94A2D1BE974CC001AC70D /* JLAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD94A2C1BE974CC001AC70D /* JLAPIManager.m */; };
 		DFD94A351BE99363001AC70D /* JLClickerUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD94A341BE99363001AC70D /* JLClickerUserManager.m */; };
-		DFD94A381BE997B8001AC70D /* JLCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD94A371BE997B8001AC70D /* JLCreateAccountViewController.m */; };
 		DFF6374B1BD631A5002B7699 /* FreeResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +94,8 @@
 		DF3962A51BCF78C8009E9D67 /* clicker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "clicker-Bridging-Header.h"; sourceTree = "<group>"; };
 		DF3962A61BCF78C9009E9D67 /* JLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLLoginViewController.h; sourceTree = "<group>"; };
 		DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLLoginViewController.m; sourceTree = "<group>"; };
+		DF72CC911BF4B6930072CA6C /* JLCreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLCreateAccountViewController.h; sourceTree = "<group>"; };
+		DF72CC921BF4B6930072CA6C /* JLCreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLCreateAccountViewController.m; sourceTree = "<group>"; };
 		DF9F37EF1BF1A88000418172 /* JLFreeResponseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLFreeResponseViewController.h; sourceTree = "<group>"; };
 		DF9F37F01BF1A88000418172 /* JLFreeResponseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLFreeResponseViewController.m; sourceTree = "<group>"; };
 		DF9F37F21BF1A91B00418172 /* JLNumericalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLNumericalViewController.h; sourceTree = "<group>"; };
@@ -105,8 +107,6 @@
 		DFD94A2F1BE976AA001AC70D /* ClickerConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ClickerConstants.h; path = ../ClickerConstants.h; sourceTree = "<group>"; };
 		DFD94A331BE99363001AC70D /* JLClickerUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLClickerUserManager.h; sourceTree = "<group>"; };
 		DFD94A341BE99363001AC70D /* JLClickerUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLClickerUserManager.m; sourceTree = "<group>"; };
-		DFD94A361BE997B8001AC70D /* JLCreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JLCreateAccountViewC\U0010ontroller.h"; sourceTree = "<group>"; };
-		DFD94A371BE997B8001AC70D /* JLCreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JLCreateAccountViewC\U0010ontroller.m"; sourceTree = "<group>"; };
 		DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeResponseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -244,16 +244,16 @@
 				DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */,
 				19A7C1041BEC1AB6003CF224 /* MXProfileViewController.h */,
 				19A7C1051BEC1AB6003CF224 /* MXProfileViewController.m */,
-				DF3962A61BCF78C9009E9D67 /* JLLoginViewController.h */,
-				DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */,
 				19B08A2C1BE9D46500411BC2 /* MXCoursesInputViewController.h */,
 				19B08A2D1BE9D46500411BC2 /* MXCoursesInputViewController.m */,
 				DF23F1661BE146320043EC0A /* JLCurrentClassViewController.h */,
 				DF23F1671BE146320043EC0A /* JLCurrentClassViewController.m */,
 				DF23F1691BE147F90043EC0A /* JLCoursesViewController.h */,
 				DF23F16A1BE147F90043EC0A /* JLCoursesViewController.m */,
-				DFD94A361BE997B8001AC70D /* JLCreateAccountViewController.h */,
-				DFD94A371BE997B8001AC70D /* JLCreateAccountViewController.m */,
+				DF3962A61BCF78C9009E9D67 /* JLLoginViewController.h */,
+				DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */,
+				DF72CC911BF4B6930072CA6C /* JLCreateAccountViewController.h */,
+				DF72CC921BF4B6930072CA6C /* JLCreateAccountViewController.m */,
 				DF9F37EF1BF1A88000418172 /* JLFreeResponseViewController.h */,
 				DF9F37F01BF1A88000418172 /* JLFreeResponseViewController.m */,
 				DF9F37F21BF1A91B00418172 /* JLNumericalViewController.h */,
@@ -375,7 +375,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD94A2D1BE974CC001AC70D /* JLAPIManager.m in Sources */,
-				DFD94A381BE997B8001AC70D /* JLCreateAccountViewController.m in Sources */,
 				359944AC1BAB79E700F8540B /* ViewController.swift in Sources */,
 				DF23F16B1BE147F90043EC0A /* JLCoursesViewController.m in Sources */,
 				DF23F1681BE146320043EC0A /* JLCurrentClassViewController.m in Sources */,
@@ -391,6 +390,7 @@
 				DF9F37F71BF1A93500418172 /* JLMultipleChoiceViewController.m in Sources */,
 				DFF6374B1BD631A5002B7699 /* FreeResponseViewController.swift in Sources */,
 				359944DF1BABA16500F8540B /* MultipleChoiceViewController.swift in Sources */,
+				DF72CC931BF4B6930072CA6C /* JLCreateAccountViewController.m in Sources */,
 				DF9F37F11BF1A88000418172 /* JLFreeResponseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
