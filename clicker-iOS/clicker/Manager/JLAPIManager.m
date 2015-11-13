@@ -135,20 +135,31 @@
                     andCompletionHandler:completion];
 }
 
++(void)getClassesWithUsername:(NSString *)email
+              andCompletion:(completionHandler) completion {
+    NSString * urlString = [NSString stringWithFormat:@"%@/user/classes", BASE_URL];
+    
+    NSString * body = [NSString stringWithFormat:@"user=%@", email];
+    urlString = [NSString stringWithFormat:@"%@?%@", urlString, body];
+    [JLAPIManager makeFormRequestwithURL:urlString
+                               andMethod:GET
+                                 andBody:nil
+                    andCompletionHandler:completion];
+}
 
 
 //TODO:
 
 
 +(void)enrollClassWithUsername:(NSString *)email
-                  andSectionID:(int)section
+                  andSectionID:(NSString *)section
                  andCompletion:(completionHandler)completion {
     NSLog(@"USERNAME: %@", email);
-    NSLog(@"SECTION: %d", section);
+    NSLog(@"SECTION: %@", section);
 
     NSString * urlString = [NSString stringWithFormat:@"%@/user/enroll", BASE_URL];
     
-    NSString * body = [NSString stringWithFormat:@"email=%@&sectionid=%d", email, section];
+    NSString * body = [NSString stringWithFormat:@"user=%@&section_id=%@", email, section];
     [body stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     [JLAPIManager makeFormRequestwithURL:urlString

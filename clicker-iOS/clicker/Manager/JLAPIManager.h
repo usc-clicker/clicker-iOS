@@ -17,11 +17,12 @@
                      andPassword:(NSString *)password
                    andCompletion:(completionHandler)completion;
 +(void)enrollClassWithUsername:(NSString *)email
-                  andSectionID:(int )section
+                  andSectionID:(NSString *)section
                  andCompletion:(completionHandler)completion;
 +(void)submitAnswerWithDictionary:(NSDictionary *)jsonDict
                        completion:(completionHandler)completion;
 +(void)getStatsWithUsername:(NSString *)email
               andCompletion:(completionHandler) completion;
-
++(void)getClassesWithUsername:(NSString *)email
+                andCompletion:(completionHandler) completion;
 @end

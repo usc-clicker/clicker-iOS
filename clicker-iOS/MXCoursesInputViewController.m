@@ -8,6 +8,7 @@
 
 #import "MXCoursesInputViewController.h"
 #import "JLAPIManager.h"
+#import "JLClickerUserManager.h"
 #import "ClickerConstants.h"
 
 @interface MXCoursesInputViewController () <UITextFieldDelegate>
@@ -23,10 +24,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.courseField becomeFirstResponder];
-    //self.saveButton.enabled = NO;
+    [self.sectionField becomeFirstResponder];
+//    self.saveButton.enabled = NO;
 }
-
+/*
 - (BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     NSString *changedString = [textField.text stringByReplacingCharactersInRange: range withString: string];
     
@@ -42,31 +43,37 @@
 - (void)validateSaveButtonForText: (NSString *) text {
     self.saveButton.enabled = ([text length] > 0);
 }
+ */
 - (IBAction)cancelButtonTapped:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)saveButtonTapped:(id)sender {
-    
-//    [JLAPIManager enrollClassWithUsername:@"abc123@usc.edu"
-//                             andSectionID:self.sectionField.text.intValue
-//                            andCompletion:^(NSURLResponse *response, NSData *data, NSError *error) {
-//                                NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-//                                
-//                                NSLog(@"dictionary: %@", dictionary);
-//                                if (dictionary[kErrorKey]) {
-//                                    NSLog(@"enroll error");
-//                                }
-//                                else {
-//                                    [self enrollSuccess];
-//                                }
-//                            }];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
+    self.view.userInteractionEnabled = NO;
+    self.navigationController.navigationBar.userInteractionEnabled = NO;
+    [JLAPIManager enrollClassWithUsername:[JLClickerUserManager user]
+                             andSectionID:self.sectionField.text
+                            andCompletion:^(NSURLResponse *response, NSData *data, NSError *error) {
+                                NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                                NSLog(@"dictionary: %@", dictionary);
+                                if (dictionary[kErrorKey]) {
+                                    NSLog(@"enroll error");
+                                    self.view.userInteractionEnabled = YES;
+                                    self.navigationController.navigationBar.userInteractionEnabled = YES;
+                                }
+                                else {
+                                    [self enrollSuccess];
+                                }
+                            }];
 }
 
 -(void)enrollSuccess {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [NSThread sleepForTimeInterval:1.0];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.navigationController.navigationBar.userInteractionEnabled = YES;
+            [self dismissViewControllerAnimated:YES completion:nil];
+        });
+    });
 }
 
 
