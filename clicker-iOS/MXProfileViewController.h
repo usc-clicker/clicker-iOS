@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MXProfileViewController : UIViewController
-
+@interface MXProfileViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+- (IBAction)logoutButtonAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *statsTableView;
+@property (nonatomic, weak) id delegate;
 @end

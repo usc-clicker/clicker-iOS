@@ -8,6 +8,7 @@
 
 #import "JLMultipleChoiceViewController.h"
 #import "JLAPIManager.h"
+#import "JLClickerUserManager.h"
 
 @interface JLMultipleChoiceViewController ()
 
@@ -63,7 +64,7 @@
                                                        @"lat":@"-23.34534",
                                                        @"lng":@"45.25234"
                                                        },
-                                               @"user":@"iwhelan@usc.edu"
+                                               @"user":[JLClickerUserManager user]
                                                }
                                   completion:^(NSURLResponse * response, NSData * data, NSError * error) {
                                       NSLog(@"response: %@", response);

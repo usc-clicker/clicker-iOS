@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface JLClickerUserManager : NSObject
-+(void)setLoggedIn:(NSString *)userID;
++(void)setLoggedIn:(NSString *)userEmail;
 +(void)setLoggedOut;
 +(BOOL)loggedIn;
 +(NSString *)user;

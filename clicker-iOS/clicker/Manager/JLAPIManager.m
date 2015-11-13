@@ -62,13 +62,15 @@
     
     [self setMethod:method forRequest:request];
     
+    if(body) {
     //appending body
-    NSData *postData = [body dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
-    
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPBody:postData];
+        NSData *postData = [body dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+        NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
+        
+        [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+        [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+        [request setHTTPBody:postData];
+    }
     
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
@@ -120,10 +122,26 @@
                 andCompletionHandler:completion];
 }
 
-// create method to enroll user in class, model it after above methods
-// MX
++(void)getStatsWithUsername:(NSString *)email
+              andCompletion:(completionHandler) completion {
+    NSString * urlString = [NSString stringWithFormat:@"%@/user/stats", BASE_URL];
+    
+    NSString * body = [NSString stringWithFormat:@"user=%@", email];
+//    [body stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    urlString = [NSString stringWithFormat:@"%@?%@", urlString, body];
+    [JLAPIManager makeFormRequestwithURL:urlString
+                               andMethod:GET
+                                 andBody:nil
+                    andCompletionHandler:completion];
+}
+
+
+
+//TODO:
+
+
 +(void)enrollClassWithUsername:(NSString *)email
-                  andSection:(int )section
+                  andSectionID:(int)section
                  andCompletion:(completionHandler)completion {
     NSLog(@"USERNAME: %@", email);
     NSLog(@"SECTION: %d", section);

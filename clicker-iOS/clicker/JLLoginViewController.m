@@ -25,7 +25,7 @@
     self.goButton.enabled = NO;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardFrameDidChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
-    self.usernameTextField.text = @"abc123@usc.edu";
+    self.usernameTextField.text = @"test0001@usc.edu";
     self.passwordTextField.text = @"password";
     self.goButton.enabled = YES;
 }
@@ -103,14 +103,14 @@
                               [self loginFailedWithError:(dictionary[kErrorKey])];
                           }
                           else {
-                              NSString * userID = dictionary[@"auth"][@"id"];
-                              [self loginSuccess:userID];
+                              NSString * userEmail = dictionary[@"auth"][@"email"];
+                              [self loginSuccess:userEmail];
                           }
                       }];
 }
 
--(void)loginSuccess:(NSString *)userID {
-    [JLClickerUserManager setLoggedIn:userID];
+-(void)loginSuccess:(NSString *)userEmail {
+    [JLClickerUserManager setLoggedIn:userEmail];
     //NSLog(@"login success");
     [self dismissViewControllerAnimated:YES completion:nil];
 }

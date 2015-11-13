@@ -15,9 +15,9 @@
         return YES;
     else return NO;
 }
-+(void)setLoggedIn:(NSString *)userID {
++(void)setLoggedIn:(NSString *)userEmail {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:userID forKey:kLoggedIn];
+    [defaults setObject:userEmail forKey:kLoggedIn];
     [defaults synchronize];
 }
 +(void)setLoggedOut {

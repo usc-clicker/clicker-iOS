@@ -21,5 +21,7 @@
                  andCompletion:(completionHandler)completion;
 +(void)submitAnswerWithDictionary:(NSDictionary *)jsonDict
                        completion:(completionHandler)completion;
++(void)getStatsWithUsername:(NSString *)email
+              andCompletion:(completionHandler) completion;
 
 @end

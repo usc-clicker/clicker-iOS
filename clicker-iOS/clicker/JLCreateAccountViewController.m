@@ -36,8 +36,8 @@
                               NSLog(@"error: %@", dictionary[kErrorKey]);
                           }
                           else {
-                              NSString * userID = dictionary[@"auth"][@"id"];
-                              [JLClickerUserManager setLoggedIn:userID];
+                              NSString * userEmail = dictionary[@"auth"][@"email"];
+                              [JLClickerUserManager setLoggedIn:userEmail];
                               [self dismissViewControllerAnimated:YES completion:^{
                                   [self.delegate dismiss];
                               }];

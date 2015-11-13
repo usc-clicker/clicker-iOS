@@ -7,34 +7,69 @@
 //
 
 #import "MXProfileViewController.h"
+#import "JLClickerUserManager.h"
+#import "JLAPIManager.h"
 
 @interface MXProfileViewController ()
-
+@property (nonatomic, strong) NSArray * stats;
 @end
 
 @implementation MXProfileViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self getUserStats];
     
 //    [self.navigationController.navigationBar
 //     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)getUserStats {
+    [JLAPIManager getStatsWithUsername:[JLClickerUserManager user]
+                      andCompletion:^(NSURLResponse * response, NSData * data, NSError * error) {
+                          self.stats = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                          NSLog(@"stats; %@", self.stats);
+#warning assuming it works
+                          
+//                          if (dictionary[kErrorKey]) {
+//                              [self getStatsFailedWithError:(dictionary[kErrorKey])];
+//                          }
+//                          else {
+                              [self getStatsSuccess];
+//                          }
+                      }];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)getStatsSuccess {
+    [self.statsTableView reloadData];
 }
-*/
+
+-(void)getStatsFailedWithError:(NSError *) error {
+    
+}
+
+- (IBAction)logoutButtonAction:(id)sender {
+    [JLClickerUserManager setLoggedOut];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.stats.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"statsCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@: %@", self.stats[indexPath.row][@"quiz_name"], self.stats[indexPath.row][@"score"]];
+    return cell;
+}
+
 
 @end

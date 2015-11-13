@@ -9,6 +9,7 @@
 #import "JLCurrentClassViewController.h"
 #import "ClickerConstants.h"
 #import "JLClickerUserManager.h"
+#import "MXProfileViewController.h"
 
 @interface JLCurrentClassViewController ()
 @property (nonatomic, strong) NSArray * arrayOfNavigationBarButtons;
@@ -57,4 +58,10 @@
     [self performSegueWithIdentifier:@"profile" sender:self];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"profile"]) {
+        MXProfileViewController * vc = segue.destinationViewController;
+        vc.delegate = self;
+    }
+}
 @end
