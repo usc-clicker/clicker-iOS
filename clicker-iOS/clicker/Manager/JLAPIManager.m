@@ -95,19 +95,11 @@
 
 +(void)submitAnswerWithDictionary:(NSDictionary *)jsonDict
                        completion:(completionHandler)completion {
+    NSLog(@"jsonDict: %@", jsonDict);
     NSString * urlString = [NSString stringWithFormat:@"%@/question/answer", BASE_URL];
     [JLAPIManager makeJsonRequestwithURL:urlString
                            andMethod:POST
-                                 andBody:@{
-                                           @"quiz_id":@"2",
-                                           @"question_id":@"1",
-                                           @"answer":@"Cody Kessler",
-                                           @"location": @{
-                                                   @"lat":@"-23.34534",
-                                                   @"lng":@"45.25234"
-                                                   },
-                                           @"user":@"iwhelan@usc.edu"
-                                           }
+                                 andBody:jsonDict
                 andCompletionHandler:completion];
 }
 

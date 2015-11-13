@@ -21,6 +21,7 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    self.quizID = 2;
     self.questionLabel.text = self.questionString;
 //    NSNumber * timeInSeconds = [NSNumber numberWithInt:[self.timeLimit intValue]/1000];
     self.timeRemaining = self.timeLimit.intValue/1000;
@@ -54,13 +55,21 @@
 }
 
 -(void)dismissAndSubmit {
-    [JLAPIManager submitAnswerWithDictionary:nil
+    [JLAPIManager submitAnswerWithDictionary:@{
+                                               @"quiz_id":[NSString stringWithFormat:@"%ld", (long)self.quizID],
+                                               @"question_id":[NSString stringWithFormat:@"%ld", (long)self.questionID],
+                                               @"answer":self.answersArray[self.selectedIndex],
+                                               @"location": @{
+                                                       @"lat":@"-23.34534",
+                                                       @"lng":@"45.25234"
+                                                       },
+                                               @"user":@"iwhelan@usc.edu"
+                                               }
                                   completion:^(NSURLResponse * response, NSData * data, NSError * error) {
-#warning null response and data???
                                       NSLog(@"response: %@", response);
                                       NSLog(@"data: %@", data);
-//                                      NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-//                                      NSLog(@"dictionary: %@", dictionary);
+                                      NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                                      NSLog(@"dictionary: %@", dictionary);
                                       
                                       [self dismissViewControllerAnimated:YES completion:nil];
                                   }];

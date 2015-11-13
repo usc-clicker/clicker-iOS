@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic) NSInteger questionID;
+@property (nonatomic) NSInteger quizID;
 - (IBAction)submitButtonAction:(id)sender;
 
 @end
