@@ -25,7 +25,32 @@
     return;
 }
 
-+(void)makeRequestwithURL:(NSString *)url
++(void)makeJsonRequestwithURL:(NSString *)url
+                    andMethod:(JLAPIMethod)method
+                      andBody:(NSDictionary *)parameters
+         andCompletionHandler:(completionHandler)completion {
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]
+                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                       timeoutInterval:60.0];
+    [self setMethod:method forRequest:request];
+    NSError * error;
+    id jsondata = [NSJSONSerialization dataWithJSONObject:parameters
+                                               options:NSJSONWritingPrettyPrinted
+                                                    error:&error];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[jsondata length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody:jsondata];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:completion];
+    
+}
+
+
++(void)makeFormRequestwithURL:(NSString *)url
                 andMethod:(JLAPIMethod)method
                   andBody:(NSString *)body
      andCompletionHandler:(completionHandler)completion {
@@ -62,9 +87,27 @@
     NSString * body = [NSString stringWithFormat:@"email=%@&password=%@", email, password];
     [body stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
-    [JLAPIManager makeRequestwithURL:urlString
+    [JLAPIManager makeFormRequestwithURL:urlString
                            andMethod:POST
                              andBody:body
+                andCompletionHandler:completion];
+}
+
++(void)submitAnswerWithDictionary:(NSDictionary *)jsonDict
+                       completion:(completionHandler)completion {
+    NSString * urlString = [NSString stringWithFormat:@"%@/question/answer", BASE_URL];
+    [JLAPIManager makeJsonRequestwithURL:urlString
+                           andMethod:POST
+                                 andBody:@{
+                                           @"quiz_id":@"2",
+                                           @"question_id":@"1",
+                                           @"answer":@"Cody Kessler",
+                                           @"location": @{
+                                                   @"lat":@"-23.34534",
+                                                   @"lng":@"45.25234"
+                                                   },
+                                           @"user":@"iwhelan@usc.edu"
+                                           }
                 andCompletionHandler:completion];
 }
 
@@ -79,7 +122,7 @@
     NSString * body = [NSString stringWithFormat:@"email=%@&password=%@", email, password];
     [body stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
-    [JLAPIManager makeRequestwithURL:urlString
+    [JLAPIManager makeFormRequestwithURL:urlString
                            andMethod:POST
                              andBody:body
                 andCompletionHandler:completion];
@@ -98,7 +141,7 @@
     NSString * body = [NSString stringWithFormat:@"email=%@&sectionid=%d", email, section];
     [body stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
-    [JLAPIManager makeRequestwithURL:urlString
+    [JLAPIManager makeFormRequestwithURL:urlString
                            andMethod:POST
                              andBody:body
                 andCompletionHandler:completion];

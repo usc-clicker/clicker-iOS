@@ -7,23 +7,79 @@
 //
 
 #import "JLMultipleChoiceViewController.h"
+#import "JLAPIManager.h"
+
+@interface JLMultipleChoiceViewController ()
+
+@property (strong, nonatomic) NSTimer * timer;
+@property (nonatomic) NSInteger timeRemaining;
+@property (nonatomic) NSInteger selectedIndex;
+
+@end
 
 @implementation JLMultipleChoiceViewController
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    self.questionLabel.text = self.questionString;
+//    NSNumber * timeInSeconds = [NSNumber numberWithInt:[self.timeLimit intValue]/1000];
+    self.timeRemaining = self.timeLimit.intValue/1000;
+    [self updateLabel];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(decrementTimer) userInfo:nil repeats:YES];
+}
+
+- (NSString *)timeFormatted:(NSInteger)totalSeconds{
+    
+    NSInteger seconds = totalSeconds % 60;
+    NSInteger minutes = (totalSeconds / 60) % 60;
+    
+    return [NSString stringWithFormat:@"%02ld:%02ld", (long)minutes, (long)seconds];
+}
+
+-(void)updateLabel {
+    self.timerLabel.text = [self timeFormatted:self.timeRemaining];
+}
+
+-(void)decrementTimer {
+    self.timeRemaining--;
+    [self updateLabel];
+    if (self.timeRemaining == 0) {
+        [self.timer invalidate];
+        [self dismissAndSubmit];
+    }
 }
 
 - (IBAction)submitButtonAction:(id)sender {
+    [self dismissAndSubmit];
+}
+
+-(void)dismissAndSubmit {
+    [JLAPIManager submitAnswerWithDictionary:nil
+                                  completion:^(NSURLResponse * response, NSData * data, NSError * error) {
+#warning null response and data???
+                                      NSLog(@"response: %@", response);
+                                      NSLog(@"data: %@", data);
+//                                      NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+//                                      NSLog(@"dictionary: %@", dictionary);
+                                      
+                                      [self dismissViewControllerAnimated:YES completion:nil];
+                                  }];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"multipleChoiceAnswer";
     
-    return nil;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.textLabel.text = self.answersArray[indexPath.row];
+    return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return self.answersArray.count;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedIndex = indexPath.row;
 }
 
 @end

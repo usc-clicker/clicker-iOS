@@ -224,6 +224,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DF4D6DA21BF55BD4007331B2 /* Old Swift Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				359944AB1BAB79E700F8540B /* ViewController.swift */,
+				359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */,
+				359944DA1BAB9F4900F8540B /* NumericalViewController.swift */,
+				DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */,
+			);
+			name = "Old Swift Controllers";
+			sourceTree = "<group>";
+		};
 		DFD94A301BE97988001AC70D /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,10 +249,7 @@
 		DFD94A311BE979A7001AC70D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				359944AB1BAB79E700F8540B /* ViewController.swift */,
-				359944DE1BABA16500F8540B /* MultipleChoiceViewController.swift */,
-				359944DA1BAB9F4900F8540B /* NumericalViewController.swift */,
-				DFF6374A1BD631A5002B7699 /* FreeResponseViewController.swift */,
+				DF4D6DA21BF55BD4007331B2 /* Old Swift Controllers */,
 				19A7C1041BEC1AB6003CF224 /* MXProfileViewController.h */,
 				19A7C1051BEC1AB6003CF224 /* MXProfileViewController.m */,
 				19B08A2C1BE9D46500411BC2 /* MXCoursesInputViewController.h */,

@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc : JLMultipleChoiceViewController = storyboard.instantiateViewControllerWithIdentifier("MultipleChoiceViewController") as! JLMultipleChoiceViewController
-        
+        NSLog("userinfo: %@", userInfo);
         let questionString = userInfo["question"] as! String;
         let timeLimit = userInfo["time_limit"] as! NSNumber;
         let choicesArray = userInfo["choices"] as! NSArray;

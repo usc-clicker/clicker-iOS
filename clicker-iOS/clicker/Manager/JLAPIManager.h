@@ -19,4 +19,7 @@
 +(void)enrollClassWithUsername:(NSString *)email
                   andSectionID:(int )section
                  andCompletion:(completionHandler)completion;
++(void)submitAnswerWithDictionary:(NSDictionary *)jsonDict
+                       completion:(completionHandler)completion;
+
 @end

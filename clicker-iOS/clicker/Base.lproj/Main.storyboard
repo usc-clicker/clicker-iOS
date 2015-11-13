@@ -176,8 +176,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitButtonAction:" destination="XVW-Zr-nho" eventType="touchUpInside" id="Y3u-yp-I4T"/>
-                                    <action selector="submittButtonAction:" destination="XVW-Zr-nho" eventType="touchUpInside" id="55j-XZ-uXe"/>
+                                    <action selector="submitButtonAction:" destination="XVW-Zr-nho" eventType="touchUpInside" id="Mda-vI-XjA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What year was USC founded?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZGa-IK-9KS">
@@ -203,42 +202,13 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m7b-Fy-WgS" id="cg1-2L-gK2">
                                             <rect key="frame" x="0.0" y="0.0" width="568" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlY-B4-yh1">
-                                                    <rect key="frame" x="66" y="29" width="494" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="Gng-DR-vcn"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.98039221759999995" green="0.69803923369999998" blue="0.26274511220000002" alpha="1" colorSpace="deviceRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circled 1 Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="wMh-39-0Eg">
-                                                    <rect key="frame" x="8" y="15" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="den-T9-HYe"/>
-                                                        <constraint firstAttribute="width" constant="50" id="klG-Az-UkR"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="RlY-B4-yh1" firstAttribute="leading" secondItem="wMh-39-0Eg" secondAttribute="trailing" constant="8" id="Gs0-be-EuH"/>
-                                                <constraint firstAttribute="trailing" secondItem="RlY-B4-yh1" secondAttribute="trailing" constant="8" id="KMq-Vz-Gml"/>
-                                                <constraint firstAttribute="centerY" secondItem="wMh-39-0Eg" secondAttribute="centerY" id="SIf-YM-EYL"/>
-                                                <constraint firstAttribute="centerY" secondItem="RlY-B4-yh1" secondAttribute="centerY" id="fch-F4-6ai"/>
-                                                <constraint firstItem="wMh-39-0Eg" firstAttribute="leading" secondItem="cg1-2L-gK2" secondAttribute="leading" constant="8" id="zBA-ED-THU"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.60000002379999995" green="0.039215687659999998" blue="0.062745101750000004" alpha="1" colorSpace="deviceRGB"/>
-                                        <connections>
-                                            <outlet property="Answer" destination="RlY-B4-yh1" id="H7u-7Z-B3Z"/>
-                                            <outlet property="Number" destination="wMh-39-0Eg" id="Tr9-Vw-2mn"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="XVW-Zr-nho" id="RV2-c5-LEJ"/>
-                                    <outlet property="delegate" destination="XVW-Zr-nho" id="0K7-Wg-X6q"/>
+                                    <outlet property="dataSource" destination="XVW-Zr-nho" id="8C4-MY-LaU"/>
+                                    <outlet property="delegate" destination="XVW-Zr-nho" id="NQ7-iI-SPP"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSS-Wu-Onq">
@@ -266,10 +236,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Time" destination="pSS-Wu-Onq" id="GYk-4q-gqf"/>
-                        <outlet property="questionLabel" destination="ZGa-IK-9KS" id="fjw-Xg-Xbb"/>
-                        <outlet property="tableView" destination="Wyn-FW-6qf" id="eVc-ln-WBg"/>
-                        <outlet property="timerLabel" destination="pSS-Wu-Onq" id="AaS-27-dbj"/>
+                        <outlet property="questionLabel" destination="ZGa-IK-9KS" id="zJQ-DS-N8g"/>
+                        <outlet property="tableView" destination="Wyn-FW-6qf" id="Zyi-OH-dhx"/>
+                        <outlet property="timerLabel" destination="pSS-Wu-Onq" id="7gX-c7-dyI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihl-mP-2Dm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -757,7 +726,4 @@
             <point key="canvasLocation" x="-781.5" y="-121.5"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Circled 1 Filled-50.png" width="25" height="25"/>
-    </resources>
 </document>
