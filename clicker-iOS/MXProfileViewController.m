@@ -27,49 +27,88 @@
 -(void)getUserStats {
     [JLAPIManager getStatsWithUsername:[JLClickerUserManager user]
                       andCompletion:^(NSURLResponse * response, NSData * data, NSError * error) {
-                          self.stats = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                          NSLog(@"stats; %@", self.stats);
+                          if (data) {
+                              self.stats = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                              NSLog(@"stats: %@", self.stats);
 #warning assuming it works
-                          
-//                          if (dictionary[kErrorKey]) {
-//                              [self getStatsFailedWithError:(dictionary[kErrorKey])];
-//                          }
-//                          else {
+                              
+                              //                          if (dictionary[kErrorKey]) {
+                              //                              [self getStatsFailedWithError:(dictionary[kErrorKey])];
+                              //                          }
+                              //                          else {
                               [self getStatsSuccess];
-//                          }
+                              //                          }
+                          }
                       }];
 }
 
 
 -(void)getStatsSuccess {
-    [self.statsTableView reloadData];
+    [self.tableView reloadData];
 }
 
 -(void)getStatsFailedWithError:(NSError *) error {
     
 }
 
-- (IBAction)logoutButtonAction:(id)sender {
+- (void)logout {
     [JLClickerUserManager setLoggedOut];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.stats.count;
+    if (section == 0) {
+        return self.stats.count;
+    }
+    else
+        return 1;
+}
+
+-(NSString *)truncateNumberTo2Places:(NSNumber *)number{
+    return [NSString stringWithFormat:@"%.2f", [number floatValue]];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"statsCell";
+    static NSString *statsCell = @"statsCell";
+    static NSString *logoutCell = @"logoutCell";
+    UITableViewCell *cell;
+    if (indexPath.section == 0) {
+        cell = [tableView dequeueReusableCellWithIdentifier:statsCell];
+        NSString * quizName = self.stats[indexPath.row][@"quiz_name"];
+        NSString * score = [self truncateNumberTo2Places:self.stats[indexPath.row][@"score"]];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@: %@", quizName, score];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    else {
+        cell = [tableView dequeueReusableCellWithIdentifier:logoutCell];
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+    }
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@: %@", self.stats[indexPath.row][@"quiz_name"], self.stats[indexPath.row][@"score"]];
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 1) {
+        //logout
+        [self logout];
+    }
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return @"Statistics";
+        case 1:
+            return @"User";
+        default:
+            return @"Other";
+    }
+}
 
 @end

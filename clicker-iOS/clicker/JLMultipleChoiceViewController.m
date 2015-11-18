@@ -69,8 +69,6 @@
                                                }
                                   completion:^(NSURLResponse * response, NSData * data, NSError * error) {
                                       if (data) {
-                                          NSLog(@"response: %@", response);
-                                          NSLog(@"data: %@", data);
                                           NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
                                           NSLog(@"dictionary: %@", dictionary);
                                       }

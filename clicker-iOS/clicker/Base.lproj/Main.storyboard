@@ -846,6 +846,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ih4-OV-8dV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1795.5" y="-576.5"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="Num-Yu-E9n">
+            <objects>
+                <tableViewController id="BVw-an-T0z" customClass="MXProfileViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="64" sectionHeaderHeight="18" sectionFooterHeight="18" id="abT-DH-O1z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="statsCell" id="9da-AQ-Eiz" userLabel="statsCell">
+                                <rect key="frame" x="0.0" y="114" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9da-AQ-Eiz" id="DFY-cz-f8g">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="logoutCell" id="ktR-8f-LJT" userLabel="logoutCell" customClass="ProfileLogoutCell">
+                                <rect key="frame" x="0.0" y="178" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ktR-8f-LJT" id="dM1-MK-Iz1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxd-LQ-cQL">
+                                            <rect key="frame" x="8" y="8" width="359" height="47"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Jxd-LQ-cQL" secondAttribute="bottom" id="3MF-9S-Acb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Jxd-LQ-cQL" secondAttribute="trailing" id="ag8-ds-qJc"/>
+                                        <constraint firstAttribute="topMargin" secondItem="Jxd-LQ-cQL" secondAttribute="top" id="jAg-pt-dZq"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="Jxd-LQ-cQL" secondAttribute="leading" id="shM-92-XZw"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BVw-an-T0z" id="ZzQ-dR-M0q"/>
+                            <outlet property="delegate" destination="BVw-an-T0z" id="2KL-2j-wpO"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wOH-aU-MbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="-1268.5" y="-576.5"/>
         </scene>
         <!--Courses-->
@@ -963,7 +1014,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tY-tg-U7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-257.5" y="220.5"/>
+            <point key="canvasLocation" x="148.5" y="-1434.5"/>
         </scene>
         <!--Courses Input View Controller-->
         <scene sceneID="9m4-Pw-BH6">
@@ -1055,7 +1106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hs-g7-XXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="259.5" y="220.5"/>
+            <point key="canvasLocation" x="-188.5" y="220.5"/>
         </scene>
         <!--Current Class View Controller-->
         <scene sceneID="BkG-uL-Q8r">
@@ -1100,7 +1151,7 @@
                     <connections>
                         <segue destination="VZC-uh-XkY" kind="presentation" identifier="login" id="OfK-vQ-009"/>
                         <segue destination="MWj-s8-g96" kind="show" identifier="classes" id="FCh-cO-H4g"/>
-                        <segue destination="Rbr-mT-NvS" kind="show" identifier="profile" id="H33-nV-3la"/>
+                        <segue destination="BVw-an-T0z" kind="show" identifier="profile" id="ahE-kZ-Vb3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ljg-eF-xcm" userLabel="First Responder" sceneMemberID="firstResponder"/>
