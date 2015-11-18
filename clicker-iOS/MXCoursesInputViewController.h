@@ -10,7 +10,7 @@
 
 //typedef void(^MXInputCompletionHandler)(NSString *courseText, NSString *sectionText);
 
-@interface MXCoursesInputViewController : UIViewController
+@interface MXCoursesInputViewController : UITableViewController
 
 //@property (copy, nonatomic) MXInputCompletionHandler completionHandler;
 

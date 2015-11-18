@@ -13,7 +13,6 @@
 #import <Parse/Parse.h>
 
 @interface MXCoursesInputViewController () <UITextFieldDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *courseField;
 @property (weak, nonatomic) IBOutlet UITextField *sectionField;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
@@ -26,28 +25,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.sectionField becomeFirstResponder];
-//    self.saveButton.enabled = NO;
-}
-/*
-- (BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    NSString *changedString = [textField.text stringByReplacingCharactersInRange: range withString: string];
-    
-    if(textField ==self.sectionField){
-        [self validateSaveButtonForText: changedString];
-    }
-    // Do no actually replace the text Field's text!
-    // Return YES and let UIKit do it
-    return YES;
 }
 
-
-- (void)validateSaveButtonForText: (NSString *) text {
-    self.saveButton.enabled = ([text length] > 0);
-}
- */
 - (IBAction)cancelButtonTapped:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 - (IBAction)saveButtonTapped:(id)sender {
     self.view.userInteractionEnabled = NO;
     self.navigationController.navigationBar.userInteractionEnabled = NO;
