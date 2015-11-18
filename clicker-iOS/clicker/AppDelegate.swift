@@ -47,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let questionID = userInfo["id"] as! NSNumber;
         NSLog("userInfo", userInfo);
         let quizID = userInfo["quiz_id"] as! String;
+        let showAnswer = userInfo["show_answers"] as! NSNumber;
+        vc.showAnswer = showAnswer;
         vc.questionString = questionString;
         vc.timeLimit = timeLimit;
         vc.answersArray = choicesArray as [AnyObject];

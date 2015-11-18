@@ -10,6 +10,8 @@
 #import "JLAPIManager.h"
 #import "JLClickerUserManager.h"
 
+#define START_CHOICE 'A'
+
 @interface JLMultipleChoiceViewController ()
 
 @property (strong, nonatomic) NSTimer * timer;
@@ -79,7 +81,11 @@
     static NSString *CellIdentifier = @"multipleChoiceAnswer";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    cell.textLabel.text = self.answersArray[indexPath.row];
+    if (self.showAnswer.integerValue == 0)
+        cell.textLabel.text = [NSString stringWithFormat:@"%c.", (char)(START_CHOICE+indexPath.row)];
+    else
+        cell.textLabel.text = self.answersArray[indexPath.row];
+    
     return cell;
 }
 

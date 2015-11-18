@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSString * questionString;
 @property (strong, nonatomic) NSArray * answersArray;
 @property (strong, nonatomic) NSNumber * timeLimit;
+@property (strong, nonatomic) NSNumber * showAnswer;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
