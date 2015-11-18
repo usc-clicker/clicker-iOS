@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JLCreateAccountViewController.h"
 
-@interface JLLoginViewController : UIViewController <CreateAccountViewControllerProtocol>
+@interface JLLoginViewController : UITableViewController <CreateAccountViewControllerProtocol>
 
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 
