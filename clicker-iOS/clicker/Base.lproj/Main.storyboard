@@ -914,11 +914,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="3Rk-hT-kMF">
-                                <rect key="frame" x="67" y="206" width="240" height="256"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGu-lo-Jsd">
+                                <rect key="frame" x="24" y="163" width="326" height="342"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark_white" translatesAutoresizingMaskIntoConstraints="NO" id="3Rk-hT-kMF">
+                                        <rect key="frame" x="43" y="8" width="240" height="256"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clicker is connected!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apU-Dp-U1f">
+                                        <rect key="frame" x="8" y="272" width="310" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="326" id="nwH-Lh-Rxk"/>
+                                    <constraint firstAttribute="height" constant="342" id="wso-yO-iYa"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HGu-lo-Jsd" firstAttribute="centerY" secondItem="eiX-7v-Fcs" secondAttribute="centerY" id="iY2-2z-JAQ"/>
+                            <constraint firstItem="HGu-lo-Jsd" firstAttribute="centerX" secondItem="eiX-7v-Fcs" secondAttribute="centerX" id="jl6-3R-Ynz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I6q-mY-Zph"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1007,6 +1027,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark" width="512" height="512"/>
+        <image name="checkmark_white" width="300" height="300"/>
     </resources>
 </document>
