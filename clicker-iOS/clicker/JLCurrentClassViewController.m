@@ -22,15 +22,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
 
-//    for (NSString *familyName in [UIFont familyNames]) {
-//        NSLog(@"%@", familyName);
-//        for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
-//            NSLog(@"\t%@",fontName);
-//        }
-//    }
-    
-    //
-    //self.navigationController.navigationBar.barStyle = 1;
+    self.view.backgroundColor = [UIColor colorWithRed:0.6 green:0.0 blue:0.0 alpha:1.0];
     
     [_classLabel setFont:[UIFont fontWithName:@"Helvetica" size:27.0]];
     
