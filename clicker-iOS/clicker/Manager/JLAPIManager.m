@@ -106,14 +106,15 @@
 }
 
 +(void)createAccountWithUsername:(NSString *)email
-             andPassword:(NSString *)password
-           andCompletion:(completionHandler)completion {
+                    andStudentId:(NSString *)uscId
+                     andPassword:(NSString *)password
+                   andCompletion:(completionHandler)completion {
     NSLog(@"USERNAME: %@", email);
     NSLog(@"PASSWORD: %@", password);
     
     NSString * urlString = [NSString stringWithFormat:@"%@/auth/register", BASE_URL];
     
-    NSString * body = [NSString stringWithFormat:@"email=%@&password=%@", email, password];
+    NSString * body = [NSString stringWithFormat:@"email=%@&password=%@&usc_id=%@", email, password, uscId];
     [body stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     [JLAPIManager makeFormRequestwithURL:urlString
@@ -147,8 +148,6 @@
                     andCompletionHandler:completion];
 }
 
-
-//TODO:
 
 
 +(void)enrollClassWithUsername:(NSString *)email

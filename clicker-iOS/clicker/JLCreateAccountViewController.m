@@ -15,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *uscIDTextField;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *confirmPasswordTextField;
 
 @end
 
@@ -23,13 +25,14 @@
 //use regex to check to see if create button should be enabled
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 180.0f;
+    return 50.0f;
 }
 
 - (IBAction)createAccountAction:(id)sender {
     [JLAPIManager createAccountWithUsername:self.usernameTextField.text
-                        andPassword:self.passwordTextField.text
-                      andCompletion:^(completionParams) {
+                               andStudentId:self.uscIDTextField.text
+                                andPassword:self.passwordTextField.text
+                              andCompletion:^(completionParams) {
                           NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
                           NSLog(@"dictionary: %@", dictionary);
                           if (dictionary[kErrorKey]) {

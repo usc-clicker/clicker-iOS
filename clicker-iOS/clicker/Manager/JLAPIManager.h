@@ -14,6 +14,7 @@
              andPassword:(NSString *)password
            andCompletion:(completionHandler)completion;
 +(void)createAccountWithUsername:(NSString *)email
+                    andStudentId:(NSString *)uscId
                      andPassword:(NSString *)password
                    andCompletion:(completionHandler)completion;
 +(void)enrollClassWithUsername:(NSString *)email

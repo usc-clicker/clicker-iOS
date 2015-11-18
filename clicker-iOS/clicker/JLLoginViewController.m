@@ -25,8 +25,8 @@
     self.goButton.enabled = NO;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardFrameDidChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
-    self.usernameTextField.text = @"test0001@usc.edu";
-    self.passwordTextField.text = @"password";
+//    self.usernameTextField.text = @"test0001@usc.edu";
+//    self.passwordTextField.text = @"password";
     self.goButton.enabled = YES;
 }
 

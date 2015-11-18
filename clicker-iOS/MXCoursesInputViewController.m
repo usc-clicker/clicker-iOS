@@ -10,6 +10,7 @@
 #import "JLAPIManager.h"
 #import "JLClickerUserManager.h"
 #import "ClickerConstants.h"
+#import <Parse/Parse.h>
 
 @interface MXCoursesInputViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *courseField;
@@ -67,6 +68,13 @@
 }
 
 -(void)enrollSuccess {
+    
+    NSString * channelName = [NSString stringWithFormat:@"s%@",self.sectionField.text];
+    
+    PFInstallation * currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation addUniqueObject:channelName forKey:@"channels"];
+    [currentInstallation saveInBackground];
+    
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [NSThread sleepForTimeInterval:1.0];
         dispatch_async(dispatch_get_main_queue(), ^{
