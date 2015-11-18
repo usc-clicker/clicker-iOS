@@ -56,7 +56,7 @@
 
 -(void)dismissAndSubmit {
     [JLAPIManager submitAnswerWithDictionary:@{
-                                               @"quiz_id":[NSString stringWithFormat:@"%ld", (long)self.quizID],
+                                               @"quiz_id":[NSString stringWithFormat:@"%@", self.quizID],
                                                @"question_id":[NSString stringWithFormat:@"%ld", (long)self.questionID],
                                                @"answer":self.answersArray[self.selectedIndex],
                                                @"location": @{

@@ -10,6 +10,7 @@
 #import "MXCoursesInputViewController.h"
 #import "JLAPIManager.h"
 #import "JLClickerUserManager.h"
+#import <Parse/Parse.h>
 
 @interface JLCoursesViewController ()
 @property (nonatomic, strong) NSMutableArray * courses;
@@ -79,13 +80,14 @@
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSString * courseId = self.courses[indexPath.row][@"section_id"];
+        NSString * sectionId = self.courses[indexPath.row][@"section_id"];
         //send unenroll
         [JLAPIManager unenrollClassWithUsername:[JLClickerUserManager user]
-                                   andSectionID:courseId
+                                   andSectionID:sectionId
                                   andCompletion:^(NSURLResponse * response, NSData * data, NSError * error) {
-//                                      self.courses = [[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error] mutableCopy];
-//                                      NSLog(@"classes; %@", self.courses);
+                                      PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+                                      [currentInstallation removeObject:[NSString stringWithFormat:@"s%@", sectionId] forKey:@"channels"];
+                                      [currentInstallation saveInBackground];
                                   }];
         //delete the cell
         [self.courses removeObjectAtIndex:indexPath.row];

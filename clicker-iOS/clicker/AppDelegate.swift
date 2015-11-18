@@ -19,9 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         installation.setDeviceTokenFromData(deviceToken)
         installation.saveInBackground()
         
-        let currentInstallation = PFInstallation.currentInstallation()
-        currentInstallation.addUniqueObject("Students", forKey: "channels")
-        currentInstallation.saveInBackground()
+//        let currentInstallation = PFInstallation.currentInstallation()
+//        currentInstallation.addUniqueObject("Students", forKey: "channels")
+//        currentInstallation.saveInBackground()
 }
     
     
@@ -49,12 +49,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let timeLimit = userInfo["time_limit"] as! NSNumber;
         let choicesArray = userInfo["choices"] as! NSArray;
         let questionID = userInfo["id"] as! NSNumber;
-        let quizID = userInfo["quiz_id"] as! NSNumber;
+        NSLog("userInfo", userInfo);
+        let quizID = userInfo["quiz_id"] as! String;
         vc.questionString = questionString;
         vc.timeLimit = timeLimit;
         vc.answersArray = choicesArray as [AnyObject];
         vc.questionID = questionID.integerValue;
-        vc.quizID = quizID.integerValue;
+        vc.quizID = quizID;
         
         
         let navigationController = UINavigationController(rootViewController: vc)

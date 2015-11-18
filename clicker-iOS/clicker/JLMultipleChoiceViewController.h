@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic) NSInteger questionID;
-@property (nonatomic) NSInteger quizID;
+@property (nonatomic, strong) NSString * quizID;
 - (IBAction)submitButtonAction:(id)sender;
 
 @end
