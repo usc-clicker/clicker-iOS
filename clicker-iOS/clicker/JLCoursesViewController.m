@@ -12,7 +12,7 @@
 #import "JLClickerUserManager.h"
 
 @interface JLCoursesViewController ()
-@property (nonatomic, strong) NSArray * courses;
+@property (nonatomic, strong) NSMutableArray * courses;
 @property (nonatomic, strong) UIRefreshControl * refreshControl;
 @end
 
@@ -37,7 +37,7 @@
     [self.refreshControl beginRefreshing];
     [JLAPIManager getClassesWithUsername:[JLClickerUserManager user]
                            andCompletion:^(NSURLResponse * response, NSData * data, NSError * error) {
-                               self.courses = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                               self.courses = [[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error] mutableCopy];
                                NSLog(@"classes; %@", self.courses);
                                [self.tableView reloadData];
                                [self.refreshControl endRefreshing];
@@ -67,6 +67,31 @@
     cell.detailTextLabel.text = self.courses[indexPath.row][@"instructor"];
 
     return cell;
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return @"Unenroll";
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSString * courseId = self.courses[indexPath.row][@"section_id"];
+        //send unenroll
+        [JLAPIManager unenrollClassWithUsername:[JLClickerUserManager user]
+                                   andSectionID:courseId
+                                  andCompletion:^(NSURLResponse * response, NSData * data, NSError * error) {
+//                                      self.courses = [[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error] mutableCopy];
+//                                      NSLog(@"classes; %@", self.courses);
+                                  }];
+        //delete the cell
+        [self.courses removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+    }
 }
 
 @end

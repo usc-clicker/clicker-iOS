@@ -54,6 +54,15 @@
     [JLAPIManager enrollClassWithUsername:[JLClickerUserManager user]
                              andSectionID:self.sectionField.text
                             andCompletion:^(NSURLResponse *response, NSData *data, NSError *error) {
+                                if (!data) {
+                                    UIAlertController * ac = [UIAlertController alertControllerWithTitle:@"Error!" message:@"Section is not valid" preferredStyle:UIAlertControllerStyleAlert];
+                                    [ac addAction:[UIAlertAction actionWithTitle:@"Okay!" style:UIAlertActionStyleDefault handler:nil]];
+                                    [self presentViewController:ac animated:YES completion:^{
+                                        self.view.userInteractionEnabled = YES;
+                                        self.navigationController.navigationBar.userInteractionEnabled = YES;
+                                    }];
+                                    return;
+                                }
                                 NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
                                 NSLog(@"dictionary: %@", dictionary);
                                 if (dictionary[kErrorKey]) {

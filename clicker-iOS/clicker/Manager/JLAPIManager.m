@@ -78,6 +78,8 @@
     
 }
 
+#pragma mark - Account
+
 +(void)loginWithUsername:(NSString *)email
              andPassword:(NSString *)password
            andCompletion:(completionHandler)completion {
@@ -95,16 +97,6 @@
                 andCompletionHandler:completion];
 }
 
-+(void)submitAnswerWithDictionary:(NSDictionary *)jsonDict
-                       completion:(completionHandler)completion {
-    NSLog(@"jsonDict: %@", jsonDict);
-    NSString * urlString = [NSString stringWithFormat:@"%@/question/answer", BASE_URL];
-    [JLAPIManager makeJsonRequestwithURL:urlString
-                           andMethod:POST
-                                 andBody:jsonDict
-                andCompletionHandler:completion];
-}
-
 +(void)createAccountWithUsername:(NSString *)email
                     andStudentId:(NSString *)uscId
                      andPassword:(NSString *)password
@@ -118,10 +110,24 @@
     [body stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     [JLAPIManager makeFormRequestwithURL:urlString
+                               andMethod:POST
+                                 andBody:body
+                    andCompletionHandler:completion];
+}
+
+#pragma mark - Questions
+
++(void)submitAnswerWithDictionary:(NSDictionary *)jsonDict
+                       completion:(completionHandler)completion {
+    NSLog(@"jsonDict: %@", jsonDict);
+    NSString * urlString = [NSString stringWithFormat:@"%@/question/answer", BASE_URL];
+    [JLAPIManager makeJsonRequestwithURL:urlString
                            andMethod:POST
-                             andBody:body
+                                 andBody:jsonDict
                 andCompletionHandler:completion];
 }
+
+#pragma mark - Statistics
 
 +(void)getStatsWithUsername:(NSString *)email
               andCompletion:(completionHandler) completion {
@@ -136,6 +142,8 @@
                     andCompletionHandler:completion];
 }
 
+#pragma mark - Questions
+
 +(void)getClassesWithUsername:(NSString *)email
               andCompletion:(completionHandler) completion {
     NSString * urlString = [NSString stringWithFormat:@"%@/user/classes", BASE_URL];
@@ -148,23 +156,38 @@
                     andCompletionHandler:completion];
 }
 
-
-
 +(void)enrollClassWithUsername:(NSString *)email
                   andSectionID:(NSString *)section
                  andCompletion:(completionHandler)completion {
     NSLog(@"USERNAME: %@", email);
     NSLog(@"SECTION: %@", section);
-
+    
     NSString * urlString = [NSString stringWithFormat:@"%@/user/enroll", BASE_URL];
     
     NSString * body = [NSString stringWithFormat:@"user=%@&section_id=%@", email, section];
     [body stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     [JLAPIManager makeFormRequestwithURL:urlString
-                           andMethod:POST
-                             andBody:body
-                andCompletionHandler:completion];
+                               andMethod:POST
+                                 andBody:body
+                    andCompletionHandler:completion];
+}
+
++(void)unenrollClassWithUsername:(NSString *)email
+                  andSectionID:(NSString *)section
+                 andCompletion:(completionHandler)completion {
+    NSLog(@"USERNAME: %@", email);
+    NSLog(@"SECTION: %@", section);
+    
+    NSString * urlString = [NSString stringWithFormat:@"%@/user/unenroll", BASE_URL];
+    
+    NSString * body = [NSString stringWithFormat:@"user=%@&section_id=%@", email, section];
+    [body stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"body: %@", body);
+    [JLAPIManager makeFormRequestwithURL:urlString
+                               andMethod:POST
+                                 andBody:body
+                    andCompletionHandler:completion];
 }
 
 @end

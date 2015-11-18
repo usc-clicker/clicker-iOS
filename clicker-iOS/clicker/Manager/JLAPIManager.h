@@ -17,6 +17,9 @@
                     andStudentId:(NSString *)uscId
                      andPassword:(NSString *)password
                    andCompletion:(completionHandler)completion;
++(void)unenrollClassWithUsername:(NSString *)email
+                    andSectionID:(NSString *)section
+                   andCompletion:(completionHandler)completion;
 +(void)enrollClassWithUsername:(NSString *)email
                   andSectionID:(NSString *)section
                  andCompletion:(completionHandler)completion;
