@@ -68,17 +68,18 @@
                                                @"user":[JLClickerUserManager user]
                                                }
                                   completion:^(NSURLResponse * response, NSData * data, NSError * error) {
-                                      NSLog(@"response: %@", response);
-                                      NSLog(@"data: %@", data);
-                                      NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                                      NSLog(@"dictionary: %@", dictionary);
-                                      
+                                      if (data) {
+                                          NSLog(@"response: %@", response);
+                                          NSLog(@"data: %@", data);
+                                          NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                                          NSLog(@"dictionary: %@", dictionary);
+                                      }
                                       [self dismissViewControllerAnimated:YES completion:nil];
                                   }];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"multipleChoiceAnswer";
+    static NSString *CellIdentifier = @"noAnswerCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (self.showAnswer.integerValue == 0)
@@ -94,6 +95,12 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //uncheck old index
+    NSIndexPath * oldIndex = [NSIndexPath indexPathForRow:self.selectedIndex inSection:indexPath.section];
+    [[tableView cellForRowAtIndexPath:oldIndex] setAccessoryType:UITableViewCellAccessoryNone];
+    //check current index
+    [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryCheckmark];
     self.selectedIndex = indexPath.row;
 }
 

@@ -32,7 +32,7 @@
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                                       timeoutInterval:60.0];
+                                                       timeoutInterval:10.0];
     [self setMethod:method forRequest:request];
     NSError * error;
     id jsondata = [NSJSONSerialization dataWithJSONObject:parameters
@@ -46,9 +46,7 @@
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:completion];
-    
 }
-
 
 +(void)makeFormRequestwithURL:(NSString *)url
                 andMethod:(JLAPIMethod)method
@@ -58,7 +56,7 @@
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                                       timeoutInterval:60.0];
+                                                       timeoutInterval:10.0];
     
     [self setMethod:method forRequest:request];
     

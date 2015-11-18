@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let installation = PFInstallation.currentInstallation()
         installation.setDeviceTokenFromData(deviceToken)
         installation.saveInBackground()
-}
+    }
     
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
@@ -36,6 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
         }
         
+        self.presentQuestionWithUserInfo(userInfo);
+        
+    }
+    
+    func presentQuestionWithUserInfo(userInfo : NSDictionary ) -> Void {
         let rootViewController = self.window!.rootViewController as! UINavigationController
         
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -59,7 +64,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: vc)
         
         rootViewController.presentViewController(navigationController, animated: true, completion: nil)
-        
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -106,7 +110,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application.registerForRemoteNotificationTypes(types)
         }
 
-        
         return true
     }
 

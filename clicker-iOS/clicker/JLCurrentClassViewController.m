@@ -10,6 +10,7 @@
 #import "ClickerConstants.h"
 #import "JLClickerUserManager.h"
 #import "MXProfileViewController.h"
+#import "clicker-Swift.h"
 
 @interface JLCurrentClassViewController ()
 @property (nonatomic, strong) NSArray * arrayOfNavigationBarButtons;
@@ -40,6 +41,31 @@
     if (![JLClickerUserManager loggedIn]) {
         [self performSegueWithIdentifier:@"login" sender:self];
     }
+//    [self testQuestion];
+}
+
+#warning test code
+-(void)testQuestion {
+    NSDictionary * userInfo = @{
+                                @"choices": @[
+                                        @"Max Browne",
+                                        @"Cody Kessler",
+                                        @"Mark Sanchez",
+                                        @"Marcus Mariota",
+                                        @"Matt Barkley"
+                                        ],
+                                @"createdAt": @"2015-10-29T04:53:29.000Z",
+                                @"expiration": @"1447837429964",
+                                @"id": @(2),
+                                @"question": @"Who is USC’s starting quarterback?",
+                                @"quiz_id": @"2",
+                                @"show_answers": @(0),
+                                @"time_limit": @(15000),
+                                @"type": @"multiple-choice",
+                                @"updatedAt": @"2015-11-15T09:00:57.000Z"
+                                };
+    AppDelegate * appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [appDelegate presentQuestionWithUserInfo:userInfo];
 }
 
 -(void)classesButtonPressed {

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JLMultipleChoiceViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface JLMultipleChoiceViewController : UITableViewController
 
 @property (strong, nonatomic) NSString * questionString;
 @property (strong, nonatomic) NSArray * answersArray;
@@ -16,7 +16,6 @@
 @property (strong, nonatomic) NSNumber * showAnswer;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic) NSInteger questionID;
 @property (nonatomic, strong) NSString * quizID;

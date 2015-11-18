@@ -224,6 +224,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DF2CD7401BFC756D000D716D /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				DF9F37EF1BF1A88000418172 /* JLFreeResponseViewController.h */,
+				DF9F37F01BF1A88000418172 /* JLFreeResponseViewController.m */,
+				DF9F37F21BF1A91B00418172 /* JLNumericalViewController.h */,
+				DF9F37F31BF1A91B00418172 /* JLNumericalViewController.m */,
+				DF9F37F51BF1A93500418172 /* JLMultipleChoiceViewController.h */,
+				DF9F37F61BF1A93500418172 /* JLMultipleChoiceViewController.m */,
+			);
+			name = Question;
+			sourceTree = "<group>";
+		};
+		DF2CD7411BFC7576000D716D /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				19B08A2C1BE9D46500411BC2 /* MXCoursesInputViewController.h */,
+				19B08A2D1BE9D46500411BC2 /* MXCoursesInputViewController.m */,
+				DF23F1661BE146320043EC0A /* JLCurrentClassViewController.h */,
+				DF23F1671BE146320043EC0A /* JLCurrentClassViewController.m */,
+				DF23F1691BE147F90043EC0A /* JLCoursesViewController.h */,
+				DF23F16A1BE147F90043EC0A /* JLCoursesViewController.m */,
+			);
+			name = Courses;
+			sourceTree = "<group>";
+		};
+		DF2CD7421BFC757F000D716D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DF3962A61BCF78C9009E9D67 /* JLLoginViewController.h */,
+				DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */,
+				DF72CC911BF4B6930072CA6C /* JLCreateAccountViewController.h */,
+				DF72CC921BF4B6930072CA6C /* JLCreateAccountViewController.m */,
+				19A7C1041BEC1AB6003CF224 /* MXProfileViewController.h */,
+				19A7C1051BEC1AB6003CF224 /* MXProfileViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		DF4D6DA21BF55BD4007331B2 /* Old Swift Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,24 +289,9 @@
 			isa = PBXGroup;
 			children = (
 				DF4D6DA21BF55BD4007331B2 /* Old Swift Controllers */,
-				19A7C1041BEC1AB6003CF224 /* MXProfileViewController.h */,
-				19A7C1051BEC1AB6003CF224 /* MXProfileViewController.m */,
-				19B08A2C1BE9D46500411BC2 /* MXCoursesInputViewController.h */,
-				19B08A2D1BE9D46500411BC2 /* MXCoursesInputViewController.m */,
-				DF23F1661BE146320043EC0A /* JLCurrentClassViewController.h */,
-				DF23F1671BE146320043EC0A /* JLCurrentClassViewController.m */,
-				DF23F1691BE147F90043EC0A /* JLCoursesViewController.h */,
-				DF23F16A1BE147F90043EC0A /* JLCoursesViewController.m */,
-				DF3962A61BCF78C9009E9D67 /* JLLoginViewController.h */,
-				DF3962A71BCF78C9009E9D67 /* JLLoginViewController.m */,
-				DF72CC911BF4B6930072CA6C /* JLCreateAccountViewController.h */,
-				DF72CC921BF4B6930072CA6C /* JLCreateAccountViewController.m */,
-				DF9F37EF1BF1A88000418172 /* JLFreeResponseViewController.h */,
-				DF9F37F01BF1A88000418172 /* JLFreeResponseViewController.m */,
-				DF9F37F21BF1A91B00418172 /* JLNumericalViewController.h */,
-				DF9F37F31BF1A91B00418172 /* JLNumericalViewController.m */,
-				DF9F37F51BF1A93500418172 /* JLMultipleChoiceViewController.h */,
-				DF9F37F61BF1A93500418172 /* JLMultipleChoiceViewController.m */,
+				DF2CD7421BFC757F000D716D /* Profile */,
+				DF2CD7411BFC7576000D716D /* Courses */,
+				DF2CD7401BFC756D000D716D /* Question */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
