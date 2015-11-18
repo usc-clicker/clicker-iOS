@@ -49,10 +49,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let timeLimit = userInfo["time_limit"] as! NSNumber;
         let choicesArray = userInfo["choices"] as! NSArray;
         let questionID = userInfo["id"] as! NSNumber;
+        let quizID = userInfo["quiz_id"] as! NSNumber;
         vc.questionString = questionString;
         vc.timeLimit = timeLimit;
         vc.answersArray = choicesArray as [AnyObject];
         vc.questionID = questionID.integerValue;
+        vc.quizID = quizID.integerValue;
         
         
         let navigationController = UINavigationController(rootViewController: vc)

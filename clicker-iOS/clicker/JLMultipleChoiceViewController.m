@@ -22,7 +22,6 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    self.quizID = 2;
     self.questionLabel.text = self.questionString;
 //    NSNumber * timeInSeconds = [NSNumber numberWithInt:[self.timeLimit intValue]/1000];
     self.timeRemaining = self.timeLimit.intValue/1000;
