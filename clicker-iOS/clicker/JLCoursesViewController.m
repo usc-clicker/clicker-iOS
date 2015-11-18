@@ -81,7 +81,7 @@
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSString * sectionId = self.courses[indexPath.row][@"section_id"];
-        //send unenroll
+//        //send unenroll
         [JLAPIManager unenrollClassWithUsername:[JLClickerUserManager user]
                                    andSectionID:sectionId
                                   andCompletion:^(NSURLResponse * response, NSData * data, NSError * error) {
