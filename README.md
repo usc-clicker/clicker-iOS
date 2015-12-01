@@ -12,7 +12,8 @@ Design Patterns and More:
 - We make use of Manager classes, which also assist with scalability and reusability. This allows us to extract the methods to make API calls and also the data and methods associated with a user. You import the Manager in the View Controller and simply call the Manager's methods from there.
 - There is also a Constants file, where you can find global definitions for variables such as the Base URL for API calls.
 
-Certificates and Provisioning Profiles:
+Certificates, Provisioning Profiles, and Devices:
+- You will likely need to do research into getting the application on your device. In order to test push notifications, you will need an Apple Developer account.
 
 TestFlight:
 
