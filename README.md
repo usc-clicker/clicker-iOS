@@ -5,7 +5,8 @@ To Run:
 - Clone the repository
 - Go to clicker-iOS folder
 - Double click on clicker.xcodeproj, which will open up Xcode
-- Click the Run (Play) button at the top and the simulator should open and start
+- Command R or Click the Run (Play) button at the top and the simulator should open and start
+	Note: Push notification is not supported on the iOS Simulator. To test push notification, you will have to connect your iPhone and install/run the application.
 
 Design Patterns and More:
 - The files in the project are sorted into folders designed to make it easier to organize the project. It will be helpful to be familiar with the MVC pattern for iOS. The Controller folder is also broken up by the different functionalities of the app. We do not currently have Model classes.
