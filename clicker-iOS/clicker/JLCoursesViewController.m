@@ -38,9 +38,16 @@
     [self.refreshControl beginRefreshing];
     [JLAPIManager getClassesWithUsername:[JLClickerUserManager user]
                            andCompletion:^(NSURLResponse * response, NSData * data, NSError * error) {
-                               self.courses = [[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error] mutableCopy];
-                               NSLog(@"classes; %@", self.courses);
-                               [self.tableView reloadData];
+                               if (data) {
+                                   self.courses = [[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error] mutableCopy];
+                                   NSLog(@"classes; %@", self.courses);
+                                   [self.tableView reloadData];
+                               }
+                               else {
+                                   UIAlertController * ac = [UIAlertController alertControllerWithTitle:@"Error" message:@"Could not get classes." preferredStyle:UIAlertControllerStyleAlert];
+                                   [ac addAction:[UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil]];
+                                   [self presentViewController:ac animated:YES completion:nil];
+                               }
                                [self.refreshControl endRefreshing];
                            }];
 }
