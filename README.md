@@ -5,7 +5,7 @@ To Run:
 - Clone the repository
 - Go to clicker-iOS folder
 - Double click on clicker.xcodeproj, which will open up Xcode
-- Click the run (play) button at the top and the simulator should open and start
+- Click the Run (Play) button at the top and the simulator should open and start
 
 Design Patterns and More:
 - The files in the project are sorted into folders designed to make it easier to organize the project. It will be helpful to be familiar with the MVC pattern for iOS. The Controller folder is also broken up by the different functionalities of the app. We do not currently have Model classes.
@@ -18,7 +18,7 @@ TestFlight:
 
 Known issues:
 - Parse push notifications through specific channels are currently not working when the application is closed.
-- We are not currently supporting forms of questions other than Multiple Choice, so the presentation of the Multiple Choice View Controller is hard-coded. Later on, you will need to get the question type from the push payload and present the appropraite View Controller.
+- We are not currently supporting forms of questions other than Multiple Choice, so the presentation of the Multiple Choice View Controller is hard-coded in the AppDelegate. Later on, you will need to get the question type from the push payload and present the appropraite View Controller.
 
 Suggestions for future improvement:
 - If desired, you may move to using AFNetworking for make API calls.
