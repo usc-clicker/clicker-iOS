@@ -13,7 +13,8 @@ Design Patterns and More:
 - There is also a Constants file, where you can find global definitions for variables such as the Base URL for API calls.
 
 Certificates, Provisioning Profiles, and Devices:
-- You will likely need to do research into getting the application on your device. In order to test push notifications, you will need an Apple Developer account. More info about transferring ownership TBD.
+- You will likely need to do research into getting the application on your device. In order to test push notifications, you will need an Apple Developer account. We currently do not have information about a general USC developer account that you can gain access to, so you may need to register for one. You will need to register the app under whichever developer account you choose to use and then research how to do set up your provisioning profiles and developer certificates.
+- Keep in mind that you will also need to modify the Parse certificates, and that when you deploy to TestFlight you will need a distribution certificate.
 
 TestFlight:
 - Currently, TestFlight is set up under Julia Lin's Developer Account. Information about transferring ownership TBD.
