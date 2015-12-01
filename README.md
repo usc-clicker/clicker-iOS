@@ -16,7 +16,7 @@ Certificates, Provisioning Profiles, and Devices:
 - You will likely need to do research into getting the application on your device. In order to test push notifications, you will need an Apple Developer account. More info about transferring ownership TBD.
 
 TestFlight:
--Currently, TestFlight is set up under Julia Lin's Developer Account. Information about transferring ownership TBD.
+- Currently, TestFlight is set up under Julia Lin's Developer Account. Information about transferring ownership TBD.
 
 Known issues:
 - Parse push notifications through specific channels are currently not working when the application is closed.
