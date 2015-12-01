@@ -9,7 +9,7 @@ To Run:
 
 Design Patterns and More:
 - The files in the project are sorted into folders designed to make it easier to organize the project. It will be helpful to be familiar with the MVC pattern for iOS. The Controller folder is also broken up by the different functionalities of the app. We do not currently have Model classes.
-- We make use of Manager classes, which also assist with scalability and reusability. This allows us to extract the methods to make API calls and also the data and methods associated with a user. You import the Manager in the View Controller and simply call the Manager's methods from there.
+- We make use of Manager classes, which also assist with scalability and reusability. This allows us to extract the methods to make API calls and also the data and methods associated with a user. You import the Manager in the View Controller and simply call the Manager's methods from there. You can add more methods to the Manager classes or create new Managers as needed.
 - There is also a Constants file, where you can find global definitions for variables such as the Base URL for API calls.
 
 Certificates, Provisioning Profiles, and Devices:
